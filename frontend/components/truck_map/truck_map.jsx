@@ -11,7 +11,7 @@ class TruckMap extends React.Component{
 
   componentDidMount() {
     const mapOptions = {
-      center: { lat: 37.7758, lng: -122.435 },
+      center: { lat: 37.916134, lng: -122.310768 },
       zoom: 14
     }
 
