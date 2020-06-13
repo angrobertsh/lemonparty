@@ -10,22 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170426041439) do
+ActiveRecord::Schema.define(version: 2020_06_13_222040) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "trucks", force: :cascade do |t|
-    t.string   "address",             null: false
-    t.string   "name",                null: false
-    t.string   "dayshours",           null: false
-    t.string   "food",                null: false
-    t.string   "status",              null: false
-    t.string   "locationdescription"
-    t.float    "lat",                 null: false
-    t.float    "lng",                 null: false
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+  create_table "lemons", force: :cascade do |t|
+    t.string "type", null: false
+    t.string "location", null: false
+    t.string "note", null: false
+    t.string "finder", null: false
+    t.float "lat", null: false
+    t.float "lng", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trucks", id: :serial, force: :cascade do |t|
+    t.string "address", null: false
+    t.string "name", null: false
+    t.string "dayshours", null: false
+    t.string "food", null: false
+    t.string "status", null: false
+    t.string "locationdescription"
+    t.float "lat", null: false
+    t.float "lng", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
