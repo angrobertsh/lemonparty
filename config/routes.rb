@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'static_pages#root'
   namespace :api, defaults: {format: :json} do
     resources :trucks, only: [:index, :show, :create]
+    resources :lemons, only: [:index, :show, :create, :update, :destroy]
     post 'trucks/seed' => "trucks#seed"
   end
 
