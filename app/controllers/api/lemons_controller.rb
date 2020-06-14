@@ -32,16 +32,16 @@ class Api::LemonsController < ApplicationController
   end
 
   def destroy
-    Lemon.find_by(id: params[:id]).destroy
+    @lemon = Lemon.find_by(id: params[:id])
 
-    @lemons = Lemon.in_bounds(params[:filters][:bounds])
+    @lemon.destroy
 
-    render "api/lemons/index"
+    render "api/lemons/show"
   end
 
   private
 
   def lemon_params
-    params.require(:lemon).permit(:tree, :location, :note, :finder, :lat, :lng)
+    params.require(:lemon).permit(:tree, :location, :note, :finder, :lat, :lng, :token)
   end
 end

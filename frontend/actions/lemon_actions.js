@@ -22,7 +22,7 @@ export const updateLemon = lemon => dispatch => (
 
 export const deleteLemon = id => dispatch => (
   LEMON_UTILS.destroyLemon(id)
-    .then(lemons => dispatch(receiveAllLemons(lemons)),
+    .then(() => dispatch(removeLemon(id)),
       errors => dispatch(receiveLemonErrors(errors.responseJSON.errors)))
 );
 
@@ -48,6 +48,11 @@ export const receiveSingleLemon = (lemon) => ({
 export const receiveAllLemons = (lemons) => ({
   type: "RECEIVE_ALL_LEMONS",
   lemons
+});
+
+export const removeLemon = (id) => ({
+  type: "REMOVE_LEMON",
+  id
 });
 
 export const editLemon = (lemonId) => ({

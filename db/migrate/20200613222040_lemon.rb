@@ -5,6 +5,7 @@ class Lemon < ActiveRecord::Migration[5.2]
       t.string :location, null: false
       t.string :note, null: false
       t.string :finder, null: false
+      t.string :token
       t.float :lat, null: false
       t.float :lng, null: false
 

@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_06_13_222040) do
     t.string "location", null: false
     t.string "note", null: false
     t.string "finder", null: false
+    t.string "token"
     t.float "lat", null: false
     t.float "lng", null: false
     t.datetime "created_at", null: false

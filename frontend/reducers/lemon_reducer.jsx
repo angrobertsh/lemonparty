@@ -22,6 +22,9 @@ const LemonReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
   let newLemon;
   let editLemon;
+  let newLemons;
+  let newFocus;
+  let newForm;
 
   switch (action.type){
     case "RECEIVE_ALL_LEMONS":
@@ -52,6 +55,18 @@ const LemonReducer = (state = defaultState, action) => {
       return newState
     case "RECEIVE_LEMON_ERRORS":
       newState = merge(newState, {errors: action.errors});
+      return newState;
+    case "REMOVE_LEMON":
+      newLemons = merge({}, Object.keys(state.lemons).reduce((acc, lemonId) => {
+        if(parseInt(action.id) !== parseInt(lemonId)) {
+          acc[lemonId] = state.lemons[lemonId];
+        }
+
+        return acc;
+      }, {}))
+      newFocus = (state.focus && (parseInt(state.focus.id) === parseInt(action.id))) ? null : state.focus;
+      newForm = parseInt(state.form.id) === parseInt(action.id) ? defaultForm : state.form;
+      newState = merge(newState, {lemons: null, form: newForm, focus: newFocus}, {lemons: newLemons});
       return newState;
     case "CLEAR_LEMON_ERRORS":
       newState = merge(newState, {errors: null}, {errors: []});
