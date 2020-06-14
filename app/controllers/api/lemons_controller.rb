@@ -41,7 +41,7 @@ class Api::LemonsController < ApplicationController
 
   private
 
-  def truck_params
-    params.require(:lemon).permit(:type, :location, :note, :finder, :lat, :lng)
+  def lemon_params
+    params.require(:lemon).permit(:tree, :location, :note, :finder, :lat, :lng)
   end
 end

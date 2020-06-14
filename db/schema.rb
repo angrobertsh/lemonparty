@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_06_13_222040) do
   enable_extension "plpgsql"
 
   create_table "lemons", force: :cascade do |t|
-    t.string "type", null: false
+    t.string "tree", null: false
     t.string "location", null: false
     t.string "note", null: false
     t.string "finder", null: false

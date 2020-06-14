@@ -1,7 +1,7 @@
 class Lemon < ActiveRecord::Migration[5.2]
   def change
     create_table :lemons do |t|
-      t.string :type, null: false
+      t.string :tree, null: false
       t.string :location, null: false
       t.string :note, null: false
       t.string :finder, null: false
