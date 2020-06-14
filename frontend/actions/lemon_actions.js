@@ -17,6 +17,7 @@ export const updateLemon = lemon => dispatch => (
     .then(lemon => dispatch(receiveSingleLemon(lemon)),
       errors => dispatch(receiveLemonErrors(errors.responseJSON.errors)))
     .then(() => dispatch(clearLemonForm()))
+    .then(() => dispatch(toggleLemonForm()))
 );
 
 export const deleteLemon = id => dispatch => (

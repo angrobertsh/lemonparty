@@ -3,7 +3,10 @@ import merge from 'lodash/merge';
 const defaultForm = {
   lat: 37.916134,
   lng: -122.310768,
-  type: "Lemon"
+  tree: "Lemon",
+  location: "",
+  note: "",
+  finder: "",
 }
 
 const defaultState = {
@@ -25,11 +28,11 @@ const LemonReducer = (state = defaultState, action) => {
       newState = merge({}, defaultState, {focus: state.focus}, {lemons: action.lemons});
       return newState;
     case "RECEIVE_SINGLE_LEMON":
-      newState = merge(newState, {lemons: action.lemon, errors: null}, {errors: []});
+      newState = merge(newState, {lemons: merge({}, action.lemon), errors: null}, {errors: []});
       return newState;
     case "EDIT_LEMON":
       editLemon = merge({}, state.lemons[action.lemonId]);
-      newState = merge(newState, {form: editLemon});
+      newState = merge(newState, {form: editLemon, formOpen: true});
       return newState;
     case "SET_FOCUS":
       newState = merge(newState, {focus: action.lemon});
@@ -42,7 +45,7 @@ const LemonReducer = (state = defaultState, action) => {
       newState = merge(newState, {form: newLemon});
       return newState;
     case "CLEAR_LEMON_FORM":
-      newState.form = defaultForm;
+      newState = merge(newState, {form: null}, {form: merge({}, defaultForm)});
       return newState
     case "TOGGLE_LEMON_FORM":
       newState = merge(newState, {formOpen: !state.formOpen});

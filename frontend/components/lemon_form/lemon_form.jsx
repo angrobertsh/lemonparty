@@ -21,11 +21,17 @@ class LemonForm extends React.Component{
 
     return (
       <div id="lemon-form-container" className={openClass}>
+        { lemon && lemon.id &&
+          <div>
+            {`Editing tree at ${lemon.location}`}
+            <div onClick={this.props.clearLemonForm}>Reset</div>
+          </div>
+        }
         <div id="close-lemon-form" onClick={this.props.toggleLemonForm}>X</div>
         <div id="lemon-form">
           <input type="text" name="lat" value={lemon.lat} disabled />
           <input type="text" name="lng" value={lemon.lng} disabled />
-          <select name="type" value={lemon.tree} onChange={this.updateFormLemon}>
+          <select name="tree" value={lemon.tree} onChange={this.updateFormLemon}>
             <option value="Lemon">Lemon</option>
             <option value="Lime">Lime</option>
             <option value="Orange">Orange</option>
@@ -33,9 +39,7 @@ class LemonForm extends React.Component{
           <input type="text" name="location" placeholder="Location" value={lemon.location} onChange={this.updateFormLemon} />
           <input type="text" name="note" placeholder="Say something nice about Robert... I mean this tree" value={lemon.note} onChange={this.updateFormLemon} />
           <input type="text" name="finder" placeholder="Your name" value={lemon.finder} onChange={this.updateFormLemon}/>
-          <div id="lemon-errors">
-            {`Error: ${this.props.errors}`}
-          </div>
+          { this.props.errors.length > 0 && <div id="lemon-errors">{`Error: ${this.props.errors.join(', ')}`}</div>}
           <div id="lemon-form-submit" onClick={this.submitForm}>
             Submit
           </div>
