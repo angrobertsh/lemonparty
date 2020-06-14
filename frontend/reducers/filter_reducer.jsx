@@ -4,6 +4,7 @@ const defaultState = {
   bounds: {},
   food: "",
   hours: "",
+  type: "",
   days: []
 };
 
