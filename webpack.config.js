@@ -24,10 +24,10 @@ module.exports = {
     path: path.join(__dirname, 'app', 'assets', 'javascripts'),
     filename: "bundle.js",
   },
-  // optimization: {
-  //   minimize: true,
-  //   minimizer: [new TerserPlugin()],
-  // },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   plugins: plugins,
   module: {
     rules: [
