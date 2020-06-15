@@ -8,6 +8,7 @@ export default class MarkerManager{
     this.addNewMarkers = this.addNewMarkers.bind(this);
     this.createMarkerFromLemon = this.createMarkerFromLemon.bind(this);
     this.stopAllBounces = this.stopAllBounces.bind(this);
+    this.bounce = this.bounce.bind(this);
   }
 
   updateMarkers(lemons, focus){
@@ -15,7 +16,7 @@ export default class MarkerManager{
     if(!focus){
       this.stopAllBounces();
     }
-    this.addNewMarkers(lemonIds, lemons);
+    this.addNewMarkers(lemonIds, lemons, focus);
     this.removeOldMarkers(lemonIds);
   }
 
@@ -29,13 +30,16 @@ export default class MarkerManager{
     this.markers.splice(idx, 1);
   }
 
-  addNewMarkers(lemonIds, lemons){
+  addNewMarkers(lemonIds, lemons, focus){
     let currentLemonIds = this.markers.map((marker) => (marker.lemonId))
     lemonIds.forEach((lemonId) => {
       if(!currentLemonIds.includes(lemonId)){
         this.createMarkerFromLemon(lemons[lemonId]);
       }
     })
+    if(!!focus){
+      this.bounce(focus)
+    }
   }
 
   createMarkerFromLemon(lemon){
@@ -53,12 +57,18 @@ export default class MarkerManager{
 
   bounceAndClick(lemon){
     this.markerClick(lemon);
+    this.bounce(lemon);
+  }
+
+  bounce(lemon) {
     let marker = this.markers.find((marker) => lemon.id === marker.lemonId )
-    if (marker.getAnimation() !== null) {
-      this.stopAllBounces();
-    } else {
-      this.stopAllBounces();
-      marker.setAnimation(google.maps.Animation.BOUNCE);
+    if (!!marker) {
+      if (marker.getAnimation() !== null) {
+        this.stopAllBounces();
+      } else {
+        this.stopAllBounces();
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
     }
   }
 
