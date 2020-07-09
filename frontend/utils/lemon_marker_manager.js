@@ -16,6 +16,13 @@ export default class MarkerManager{
     if(!focus){
       this.stopAllBounces();
     }
+    if(lemonIds.includes(-1)){
+      this.markers.filter((marker) => marker.lemonId === -1).forEach((marker) => {
+        if (lemons[-1].lat !== marker.position.lat() && lemons[-1].lng !== marker.position.lng()){
+          this.removeMarker(marker)
+        }
+      })
+    }
     this.addNewMarkers(lemonIds, lemons, focus);
     this.removeOldMarkers(lemonIds);
   }
@@ -51,7 +58,9 @@ export default class MarkerManager{
       icon: 'http://res.cloudinary.com/dujcpxlhk/image/upload/v1496940485/r5whkdz0ingbhzk57eyx.png'
     });
     marker.setAnimation(null);
-    marker.addListener('click', () => this.bounceAndClick(lemon));
+    if (marker.lemonId !== -1) {
+      marker.addListener('click', () => this.bounceAndClick(lemon));
+    }
     this.markers.push(marker);
   }
 

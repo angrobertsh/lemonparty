@@ -5,7 +5,9 @@ import * as LEMON_ACTIONS from '../../actions/lemon_actions';
 
 const mapStateToProps = state => ({
   lemons: state.lemons.lemons,
-  focus: state.lemons.focus
+  focus: state.lemons.focus,
+  formOpen: state.lemons.formOpen,
+  form: state.lemons.form
 });
 
 const mapDispatchToProps = dispatch => ({

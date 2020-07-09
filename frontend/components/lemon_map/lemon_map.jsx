@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import LemonMarkerManager from '../../utils/lemon_marker_manager';
+import merge from 'lodash/merge';
 
 class LemonMap extends React.Component{
 
@@ -37,11 +38,32 @@ class LemonMap extends React.Component{
   addEmptyClickListener(){
     google.maps.event.addListener(this.map, 'click', (e) => {
       this.props.updateLemonForm({lat: e.latLng.lat(), lng: e.latLng.lng()});
+
+      let lemons;
+
+      if (this.props.formOpen) {
+        let fakeTree = { [-1]: (merge({}, this.props.form, {
+          tree: "FAKE", id: -1, lat: e.latLng.lat(), lng: e.latLng.lng()}
+        )) };
+        lemons = merge({}, this.props.lemons, fakeTree)
+      } else {
+        lemons = this.props.lemons;
+      }
+      this.LemonMarkerManager.updateMarkers(lemons, this.props.focus);
     });
   }
 
   componentDidUpdate(){
-    this.LemonMarkerManager.updateMarkers(this.props.lemons, this.props.focus);
+    let lemons;
+
+    if (this.props.formOpen) {
+      let fakeTree = { [-1]: (merge({}, this.props.form, {tree: "FAKE", id: -1})) };
+      lemons = merge({}, this.props.lemons, fakeTree)
+    } else {
+      lemons = this.props.lemons;
+    }
+
+    this.LemonMarkerManager.updateMarkers(lemons, this.props.focus);
   }
 
   render(){

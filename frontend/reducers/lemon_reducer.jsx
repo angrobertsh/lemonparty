@@ -28,7 +28,7 @@ const LemonReducer = (state = defaultState, action) => {
 
   switch (action.type){
     case "RECEIVE_ALL_LEMONS":
-      newState = merge({}, defaultState, {focus: state.focus}, {lemons: action.lemons});
+      newState = merge({}, defaultState, {focus: state.focus}, {formOpen: state.formOpen}, {form: state.form}, {lemons: action.lemons});
       return newState;
     case "RECEIVE_SINGLE_LEMON":
       newState = merge(newState, {lemons: merge({}, action.lemon), errors: null}, {errors: []});
