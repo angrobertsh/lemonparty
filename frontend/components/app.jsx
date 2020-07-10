@@ -1,9 +1,11 @@
 import React from 'react';
 import Topbar from './topbar/topbar';
 import LemonContainer from './lemon/lemon_container';
+import LemonModalContainer from './lemon_modal/lemon_modal_container';
 
 const App = ({children}) => (
   <div id="page">
+    <LemonModalContainer />
     <div id="app">
       <Topbar />
       <LemonContainer />

@@ -14,7 +14,8 @@ const defaultState = {
   errors: [],
   focus: null,
   form: defaultForm,
-  formOpen: false
+  formOpen: false,
+  modalOpen: false
 };
 
 const LemonReducer = (state = defaultState, action) => {
@@ -28,7 +29,7 @@ const LemonReducer = (state = defaultState, action) => {
 
   switch (action.type){
     case "RECEIVE_ALL_LEMONS":
-      newState = merge({}, defaultState, {focus: state.focus}, {formOpen: state.formOpen}, {form: state.form}, {lemons: action.lemons});
+      newState = merge({}, defaultState, {modalOpen: state.modalOpen}, {focus: state.focus}, {formOpen: state.formOpen}, {form: state.form}, {lemons: action.lemons});
       return newState;
     case "RECEIVE_SINGLE_LEMON":
       newState = merge(newState, {lemons: merge({}, action.lemon), errors: null}, {errors: []});
@@ -52,6 +53,9 @@ const LemonReducer = (state = defaultState, action) => {
       return newState
     case "TOGGLE_LEMON_FORM":
       newState = merge(newState, {formOpen: !state.formOpen});
+      return newState
+    case "TOGGLE_LEMON_MODAL":
+      newState = merge(newState, {modalOpen: action.val});
       return newState
     case "RECEIVE_LEMON_ERRORS":
       newState = merge(newState, {errors: action.errors});

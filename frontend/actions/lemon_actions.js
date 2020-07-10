@@ -11,6 +11,7 @@ export const createLemon = lemon => dispatch => (
       errors => dispatch(receiveLemonErrors(errors.responseJSON.errors)))
     .then(() => dispatch(clearLemonForm()))
     .then(() => dispatch(toggleLemonForm()))
+    .then(() => dispatch(toggleLemonModal(true)))
 );
 
 export const updateLemon = lemon => dispatch => (
@@ -76,4 +77,9 @@ export const clearLemonForm = () => ({
 
 export const toggleLemonForm = () => ({
   type: "TOGGLE_LEMON_FORM"
+});
+
+export const toggleLemonModal = (val) => ({
+  type: "TOGGLE_LEMON_MODAL",
+  val
 });
