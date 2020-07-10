@@ -43,7 +43,7 @@ class LemonMap extends React.Component{
 
       if (this.props.formOpen) {
         let fakeTree = { [-1]: (merge({}, this.props.form, {
-          tree: "FAKE", id: -1, lat: e.latLng.lat(), lng: e.latLng.lng()}
+          tree: "FAKE", id: -1, lat: e.latLng.lat(), lng: e.latLng.lng(), edit: !!this.props.form.id}
         )) };
         lemons = merge({}, this.props.lemons, fakeTree)
       } else {

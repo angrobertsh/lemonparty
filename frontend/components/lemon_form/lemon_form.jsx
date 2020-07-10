@@ -29,6 +29,7 @@ class LemonForm extends React.Component{
         }
         <div id="close-lemon-form" onClick={this.props.toggleLemonForm}>X</div>
         <div id="lemon-form">
+          Click the map to set your tree!
           <input type="text" name="lat" value={lemon.lat} disabled />
           <input type="text" name="lng" value={lemon.lng} disabled />
           <select name="tree" value={lemon.tree} onChange={this.updateFormLemon}>
