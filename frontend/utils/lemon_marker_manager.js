@@ -50,12 +50,23 @@ export default class MarkerManager{
   }
 
   createMarkerFromLemon(lemon){
+    let icon;
+    if (lemon.tree === "Lemon") {
+      icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,w_25/v1592092413/Lemons/hiclipart.com_2.png'
+    } else if (lemon.tree === "Lime") {
+      icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,h_32/v1592092399/Lemons/hiclipart.com_6.png'
+    } else if (lemon.tree === "Orange") {
+      icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,h_32/v1592092400/Lemons/hiclipart.com_4.png'
+    } else if (lemon.tree === "FAKE") {
+      icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,w_30/v1594751711/Lemons/newsquare.png'
+    }
+
     const pos = new google.maps.LatLng(lemon.lat, lemon.lng);
     const marker = new google.maps.Marker({
       position: pos,
       map: this.map,
       lemonId: lemon.id,
-      icon: 'http://res.cloudinary.com/dujcpxlhk/image/upload/v1496940485/r5whkdz0ingbhzk57eyx.png'
+      icon: icon
     });
     marker.setAnimation(null);
     if (marker.lemonId !== -1) {

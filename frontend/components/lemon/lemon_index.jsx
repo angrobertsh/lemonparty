@@ -1,6 +1,5 @@
 import React from 'react';
 import LemonIndexItemContainer from './lemon_index_item_container';
-import LemonFocusContainer from './lemon_focus_container';
 
 class LemonIndex extends React.Component{
   constructor(props){
@@ -10,14 +9,6 @@ class LemonIndex extends React.Component{
 
   componentDidMount(){
     this.lemonIndexContainer.classList.add("fade-in");
-  }
-
-  componentDidUpdate(){
-    if(this.props.focus){
-      this.lemonIndexContainer.classList.add("slide-left");
-    } else {
-      this.lemonIndexContainer.classList.remove("slide-left");
-    }
   }
 
   renderLemons(){
@@ -34,12 +25,9 @@ class LemonIndex extends React.Component{
             <div id="lemon-index-header-container">
               <header id="lemon-index-header">Nearby Lemon Trees</header>
             </div>
-            <ul>
+            <ul id="lemon-index-list">
               { lemons }
             </ul>
-          </div>
-          <div id="lemon-focus">
-            { this.props.focus && <LemonFocusContainer />}
           </div>
         </div>
       </div>

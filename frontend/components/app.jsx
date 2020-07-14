@@ -3,13 +3,12 @@ import Topbar from './topbar/topbar';
 import LemonContainer from './lemon/lemon_container';
 import LemonModalContainer from './lemon_modal/lemon_modal_container';
 
-const App = ({children}) => (
+const App = () => (
   <div id="page">
     <LemonModalContainer />
     <div id="app">
       <Topbar />
       <LemonContainer />
-      {children}
     </div>
   </div>
 );
@@ -44,9 +43,11 @@ export default App;
 //             <LemonIndexItem />
 //             <LemonIndexItem />
 //           </div>
-//           <LemonFocusContainer />
 //         </LemonIndexContainer>
 //         <LemonAddButton />
+//       </div>
+//       <div>
+//         <LemonFocusContainer />
 //       </div>
 //       <LemonForm />
 //     </div>

@@ -20,40 +20,29 @@ body {
   visibility: hidden;
 }
 
-.none {
-  display: none;
+.hide {
+  display: none !important;
 }
 
 // App Containers and header bars
 
 #root {
-  background-image: image-url("truck_background.png");
-  background-size: cover;
-  min-height: 100vh;
+  // background-image: image-url("truck_background.png");
+  // background-size: cover;
+  // min-height: 100vh;
 }
 
 #app {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  min-width: 900px;
-  max-width: 90vw;
-  padding-left: 45px;
-  padding-right: 45px;
-  background-color: $extra-pale-white;
 }
 
 #page {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 #app-body {
-  background-color: $pale-white;
-  display: flex;
+  width: 100vw;
 }
 
 #topbar-container{
@@ -63,310 +52,316 @@ body {
   background-image: image-url("plate.jpg");
   background-size: cover;
   background-position: center;
-  width: 870px;
+  width: 100vw;
+}
+
+#app-body {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+}
+
+#map-container-container {
+  width: 100%;
+  min-height: 500px;
 }
 
 #map-container {
-  width: 500px;
-  height: 500px;
-  margin: 10px;
-  box-shadow: -7px 7px 5px $dark-brown;
+  width: 100%;
+  min-height: 500px;
+}
+
+#lemon-data-area {
+}
+
+#lemon-show-area {
+  position: absolute;
+  z-index: 1;
+}
+
+#lemon-focus {
+  position: absolute;
+  z-index: 2;
+}
+
+#lemon-form-container {
+  position: absolute;
+  z-index: 3;
+}
+
+#lemon-index {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+#lemon-index-list {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.lemon {
+  display: inline-block;
+  width: 25%;
+  padding: 1%;
+  box-sizing: border-box;
 }
 
 // Truck index
 
 #truck-index-container-container {
-  width: 350px;
-  height: 520px;
-  overflow: hidden;
-  padding: 10px;
-  border-left: 1px solid $dark-brown;
-  box-sizing: border-box;
 }
 
 #truck-index-container {
-  width: 208%;
-  height: 75%;
-  display: flex;
-  justify-content: space-between;
-  transition: transform .25s ease-in-out;
 }
 
 #truck-index-header {
-  background-color: $higher-opacity-blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  box-sizing: border-box;
-  padding: 10px 0;
-  border-bottom: 2px solid $light-brown;
 }
 
 .search-form-container {
-  background-color: $white;
-  height: 23%;
-  margin-bottom: 2%;
-  border: 1px solid $dark-brown;
 }
 
 #truck-index {
-  border: 1px solid $dark-brown;
-  box-sizing: border-box;
-  width: 48%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
 }
 
 #truck-index ul{
-  overflow-x: hidden;
-  overflow-y: scroll;
-  height: 100%;
-  padding: 5px;
-  background-color: $white;
+  // overflow-x: hidden;
+  // overflow-y: scroll;
+  // height: 100%;
+  // padding: 5px;
+  // background-color: $white;
 }
 
 #truck-index ul .truck:last-child{
-  border-bottom: none;
+  // border-bottom: none;
 }
 
 // Truck show
 
 #truck-focus{
-  width: 48%;
-  height: 100%;
-  display: flex;
 }
 
 #truck-focus-back{
-  height: 20px;
-  width: 20px;
-  background-image: image-url("back.png");
-  background-size: cover;
-  background-position: center;
-  border: none;
-  margin: 5px 0 0 5px;
+  // height: 20px;
+  // width: 20px;
+  // background-image: image-url("back.png");
+  // background-size: cover;
+  // background-position: center;
+  // border: none;
+  // margin: 5px 0 0 5px;
 }
 
 #truck-focus-truck{
-  padding: 5px;
-  box-sizing: border-box;
+  // padding: 5px;
+  // box-sizing: border-box;
 }
 
 #truck-focus-truck .truck{
-  border: none;
+  // border: none;
 }
 
 #truck-focus-item {
-  background-color: white;
-  width: 100%;
+  // background-color: white;
+  // width: 100%;
 }
 
 // Search Form
 
 .search-form-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 #leslie-container {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 #leslie {
-  background-image: image-url("lesliesbrocco.png");
-  border-radius: 50px;
-  height: 85px;
-  width: 85px;
-  background-size: cover;
-  background-position: center;
+  // background-image: image-url("lesliesbrocco.png");
+  // border-radius: 50px;
+  // height: 85px;
+  // width: 85px;
+  // background-size: cover;
+  // background-position: center;
 }
 
 .search-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // margin-left: 10px;
 }
 
 .search-form-food-header {
-  margin: 2px;
+  // margin: 2px;
 }
 
 .search-form-input-food {
-  margin: 2px;
+  // margin: 2px;
 }
 
 .submit-button {
-  border: none;
-  background-color: $higher-opacity-blue;
-  width: 181px;
-  padding: 6px;
-  cursor: pointer;
-  transition: background-color .5s ease;
-  transition: color .5s ease;
-  margin: 2px;
+  // border: none;
+  // background-color: $higher-opacity-blue;
+  // width: 181px;
+  // padding: 6px;
+  // cursor: pointer;
+  // transition: background-color .5s ease;
+  // transition: color .5s ease;
+  // margin: 2px;
 }
 
 .submit-button:hover {
-  background-color: $brown;
-  color: white;
+  // background-color: $brown;
+  // color: white;
 }
 
 .search-form-input-food {
-  width: 165px;
-  padding: 6px;
+  // width: 165px;
+  // padding: 6px;
 }
 
 // Truck
 
 .truck {
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-  border-bottom: 1px solid $dark-brown;
-  font-size: .9rem;
+  // display: flex;
+  // flex-direction: column;
+  // padding: 12px;
+  // border-bottom: 1px solid $dark-brown;
+  // font-size: .9rem;
 }
 
 .truck-top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
+  // display: flex;
+  // justify-content: space-between;
+  // margin-bottom: 5px;
 }
 
 .truck-name-address {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 }
 
 .truck-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding-bottom: 2px;
+  // font-size: 1.2rem;
+  // font-weight: 600;
+  // padding-bottom: 2px;
 }
 
 .truck-address {
-  color: $brown;
+  // color: $brown;
 }
 
 .truck-food {
-  font-size: .9rem;
+  // font-size: .9rem;
 }
 
 // Splash
 
 #splash {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 3;
-  background-color: $blue;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // width: 100%;
+  // height: 100%;
+  // position: fixed;
+  // z-index: 3;
+  // background-color: $blue;
 }
 
 #splash-welcome-container{
-  background-color: inherit;
-  width: 100%;
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // background-color: inherit;
+  // width: 100%;
+  // height: 20%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 #splash-welcome {
-  font-family: 'Dancing Script', cursive;
-  color: white;
-  font-size: 4rem;
+  // font-family: 'Dancing Script', cursive;
+  // color: white;
+  // font-size: 4rem;
 }
 
 #splash .search-form-container {
-  flex-direction: column;
-  width: 100%;
-  height: 80%;
-  border: none;
-  background-color: inherit;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  // flex-direction: column;
+  // width: 100%;
+  // height: 80%;
+  // border: none;
+  // background-color: inherit;
+  // justify-content: flex-start;
+  // align-items: center;
+  // margin: 0;
+  // padding: 0;
 }
 
 
 #splash #leslie {
-  width: 180px;
-  height: 180px;
-  border-radius: 100px;
-  margin: 40px;
+  // width: 180px;
+  // height: 180px;
+  // border-radius: 100px;
+  // margin: 40px;
 }
 
 #splash .search-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 #splash .search-form-food {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
 }
 
 #splash .search-form-food-header {
-  font-size: 2.2rem;
-  color: white;
+  // font-size: 2.2rem;
+  // color: white;
 }
 
 #splash .search-form-input-food {
-  border: none;
-  text-align: center;
-  margin: 30px;
-  padding: 10px;
-  font-size: 1.2rem;
+  // border: none;
+  // text-align: center;
+  // margin: 30px;
+  // padding: 10px;
+  // font-size: 1.2rem;
 }
 
 #splash .submit-button {
-  width: 200px;
-  padding: 10px;
-  font-size: 1.2rem;
-  color: white;
-  background-color: $purple-blue;
+  // width: 200px;
+  // padding: 10px;
+  // font-size: 1.2rem;
+  // color: white;
+  // background-color: $purple-blue;
 }
 
 #splash .submit-button:hover {
-  background-color: $brown;
+  // background-color: $brown;
 }
-
-// Responsive
-
-@media only screen and (max-width: 850px) {
-  #app-body {
-    flex-direction: column;
-  }
-
-  #truck-index-container-container{
-    width: 520px;
-    border: none;
-  }
-
-}
-
 
 // Transitions/animations
+
+.flex {
+  display: flex;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
 
 .to-fade-in-fast {
   opacity: 0;
@@ -400,8 +395,4 @@ body {
 .slide-left {
   transform: translateX(-52%);
   transition: transform .75s ease-in-out;
-}
-
-.hide {
-  display: none !important;
 }

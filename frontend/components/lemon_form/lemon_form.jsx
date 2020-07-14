@@ -1,4 +1,5 @@
 import React from 'react';
+import merge from 'lodash/merge';
 
 class LemonForm extends React.Component{
   constructor(props){
@@ -8,7 +9,8 @@ class LemonForm extends React.Component{
   }
 
   submitForm(){
-    !!this.props.formLemon.id ? this.props.updateLemon(this.props.formLemon) : this.props.createLemon(this.props.formLemon);
+    !!this.props.formLemon.id ? this.props.updateLemon(this.props.formLemon) :
+      this.props.createLemon(merge(this.props.formLemon, { token: sessionStorage.getItem("robertslemonpartykey") }));
   }
 
   updateFormLemon(e){
@@ -17,36 +19,41 @@ class LemonForm extends React.Component{
 
   render(){
     const lemon = this.props.formLemon;
-    const openClass = this.props.formOpen ? "" : "hidden";
 
-    return (
-      <div id="lemon-form-container" className={openClass}>
-        { lemon && lemon.id &&
-          <div>
-            {`Editing tree at ${lemon.location}`}
-            <div onClick={this.props.clearLemonForm}>Reset</div>
-          </div>
-        }
-        <div id="close-lemon-form" onClick={this.props.toggleLemonForm}>X</div>
-        <div id="lemon-form">
-          Click the map to set your tree!
-          <input type="text" name="lat" value={lemon.lat} disabled />
-          <input type="text" name="lng" value={lemon.lng} disabled />
-          <select name="tree" value={lemon.tree} onChange={this.updateFormLemon}>
-            <option value="Lemon">Lemon</option>
-            <option value="Lime">Lime</option>
-            <option value="Orange">Orange</option>
-          </select>
-          <input type="text" name="location" placeholder="Location" value={lemon.location} onChange={this.updateFormLemon} />
-          <input type="text" name="note" placeholder="Say something nice about Robert... I mean this tree" value={lemon.note} onChange={this.updateFormLemon} />
-          <input type="text" name="finder" placeholder="Your name" value={lemon.finder} onChange={this.updateFormLemon}/>
-          { this.props.errors.length > 0 && <div id="lemon-errors">{`Error: ${this.props.errors.join(', ')}`}</div>}
-          <div id="lemon-form-submit" onClick={this.submitForm}>
-            Submit
+    if (this.props.formOpen) {
+      return (
+        <div id="lemon-form-container">
+          <div id="close-lemon-form" onClick={this.props.toggleLemonForm}>Back</div>
+          <div id="lemon-form-with-heading">
+            { lemon && lemon.id &&
+              <div>
+                {`Editing tree at ${lemon.location}`}
+                <div onClick={this.props.clearLemonForm}>Reset</div>
+              </div>
+            }
+            <div id="lemon-form">
+              Click the map to set your tree!
+              <input type="text" name="lat" value={lemon.lat} disabled />
+              <input type="text" name="lng" value={lemon.lng} disabled />
+              <select name="tree" value={lemon.tree} onChange={this.updateFormLemon}>
+                <option value="Lemon">Lemon</option>
+                <option value="Lime">Lime</option>
+                <option value="Orange">Orange</option>
+              </select>
+              <input type="text" name="location" placeholder="Location" value={lemon.location} onChange={this.updateFormLemon} />
+              <input type="text" name="note" placeholder="Say something nice about Robert... I mean this tree" value={lemon.note} onChange={this.updateFormLemon} />
+              <input type="text" name="finder" placeholder="Your name" value={lemon.finder} onChange={this.updateFormLemon}/>
+              { this.props.errors.length > 0 && <div id="lemon-errors">{`Error: ${this.props.errors.join(', ')}`}</div>}
+              <div id="lemon-form-submit" onClick={this.submitForm}>
+                Submit
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }
 

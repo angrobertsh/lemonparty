@@ -6,7 +6,7 @@ class LemonModal extends React.Component{
   }
 
   render(){
-    const hide = this.props.modalOpen ? "" : "none"
+    const hide = this.props.modalOpen ? "" : "hide"
 
     return <div className={hide} id="lemon-modal-container" onClick={this.props.toggleLemonModal}>
       <div id="lemon-modal">
