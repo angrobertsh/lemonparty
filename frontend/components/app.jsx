@@ -1,6 +1,6 @@
 import React from 'react';
 import Topbar from './topbar/topbar';
-import LemonContainer from './lemon/lemon_container';
+import LemonContainerContainer from './lemon/lemon_container_container';
 import LemonModalContainer from './lemon_modal/lemon_modal_container';
 
 const App = () => (
@@ -8,7 +8,7 @@ const App = () => (
     <LemonModalContainer />
     <div id="app">
       <Topbar />
-      <LemonContainer />
+      <LemonContainerContainer />
     </div>
   </div>
 );

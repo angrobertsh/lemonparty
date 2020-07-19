@@ -52,7 +52,11 @@ const LemonReducer = (state = defaultState, action) => {
       newState = merge(newState, {form: null}, {form: merge({}, defaultForm)});
       return newState
     case "TOGGLE_LEMON_FORM":
-      newState = merge(newState, {formOpen: !state.formOpen});
+      if (state.form.id) {
+        newState = merge(newState, {formOpen: !state.formOpen}, {form: null}, {form: merge({}, defaultForm)});
+      } else {
+        newState = merge(newState, {formOpen: !state.formOpen});
+      }
       return newState
     case "TOGGLE_LEMON_MODAL":
       newState = merge(newState, {modalOpen: action.val});

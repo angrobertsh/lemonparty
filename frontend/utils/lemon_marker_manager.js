@@ -70,14 +70,9 @@ export default class MarkerManager{
     });
     marker.setAnimation(null);
     if (marker.lemonId !== -1) {
-      marker.addListener('click', () => this.bounceAndClick(lemon));
+      marker.addListener('click', () => this.markerClick(lemon));
     }
     this.markers.push(marker);
-  }
-
-  bounceAndClick(lemon){
-    this.markerClick(lemon);
-    this.bounce(lemon);
   }
 
   bounce(lemon) {

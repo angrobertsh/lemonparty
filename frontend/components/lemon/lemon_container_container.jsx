@@ -1,16 +1,15 @@
 import { connect } from 'react-redux';
-import LemonAddButton from './lemon_add_button';
-import * as LEMON_ACTIONS from '../../actions/lemon_actions';
+import LemonContainer from './lemon_container';
 
 const mapStateToProps = state => ({
   formOpen: state.lemons.formOpen,
+  focus: state.lemons.focus,
 });
 
 const mapDispatchToProps = dispatch => ({
-  toggleLemonForm: () => dispatch(LEMON_ACTIONS.toggleLemonForm())
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LemonAddButton);
+)(LemonContainer);

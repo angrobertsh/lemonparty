@@ -14,13 +14,19 @@ class LemonContainer extends React.Component{
     return (
       <div id="app-body">
         <LemonMapContainer />
+        <LemonAddButtonContainer />
         <div id="lemon-data-area">
           <div id="lemon-show-area">
-            <LemonIndexContainer />
-            <LemonAddButtonContainer />
+            { !this.props.focus && !this.props.formOpen &&
+              <LemonIndexContainer />
+            }
           </div>
-          <LemonFocusContainer />
-          <LemonFormContainer />
+          { this.props.focus && !this.props.formOpen &&
+            <LemonFocusContainer />
+          }
+          { this.props.formOpen &&
+            <LemonFormContainer />
+          }
         </div>
       </div>
     );

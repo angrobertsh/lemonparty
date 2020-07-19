@@ -19,16 +19,14 @@ class LemonIndex extends React.Component{
   render(){
     let lemons = this.renderLemons();
     return (
-      <div id="lemon-index-container-container">
-        <div id="lemon-index-container" className="to-fade-in-slower" ref={ lemonIndexContainer => this.lemonIndexContainer = lemonIndexContainer }>
-          <div id="lemon-index">
-            <div id="lemon-index-header-container">
-              <header id="lemon-index-header">Nearby Lemon Trees</header>
-            </div>
-            <ul id="lemon-index-list">
-              { lemons }
-            </ul>
+      <div id="lemon-index-container" className="to-fade-in-slower" ref={ lemonIndexContainer => this.lemonIndexContainer = lemonIndexContainer }>
+        <div id="lemon-index">
+          <div id="lemon-index-header-container">
+            <header id="lemon-index-header">Nearby Lemon Trees</header>
           </div>
+          <ul id="lemon-index-list">
+            { lemons }
+          </ul>
         </div>
       </div>
     );

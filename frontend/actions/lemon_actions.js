@@ -12,6 +12,7 @@ export const createLemon = lemon => dispatch => (
     .then(() => dispatch(clearLemonForm()))
     .then(() => dispatch(toggleLemonForm()))
     .then(() => dispatch(toggleLemonModal(true)))
+    .then(() => dispatch(clearFocus()))
 );
 
 export const updateLemon = lemon => dispatch => (

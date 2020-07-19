@@ -9,9 +9,33 @@ $white: rgba(255, 255, 255, 1);
 $pale-white: rgba(160, 160, 160, .2);
 $extra-pale-white: rgba(255, 255, 255, .75);
 $purple-blue: rgba(16, 0, 76, .6);
+$yellow: rgba(247, 202, 24, 1);
+$pale-yellow: rgba(247, 202, 24, .5);
+$light-yellow: rgba(244, 247, 118, 1);
+$pale-light-yellow: rgba(244, 247, 118, .5);
+$gray: rgba(190, 190, 190, 1);
+$light-gray: rgba(190, 190, 190, .1);
+$orange: rgba(255, 215, 142, 1);
+$lime: rgba(157, 251, 75, 1);
+$medium-orange: rgba(255, 215, 142, .875);
+$pale-orange: rgba(255, 215, 142, .5);
+$pale-lime: rgba(157, 251, 75, .5);
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  box-sizing: border-box !important;
+}
+
+textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input {
+  padding: 5px;
+}
+
+select {
+  padding: 5px;
 }
 
 // Utility
@@ -43,6 +67,7 @@ body {
 
 #app-body {
   width: 100vw;
+  height: 100%;
 }
 
 #topbar-container{
@@ -67,20 +92,24 @@ body {
 
 #map-container-container {
   width: 100%;
-  min-height: 500px;
+  min-height: 400px;
 }
 
 #map-container {
   width: 100%;
-  min-height: 500px;
+  min-height: 400px;
 }
 
 #lemon-data-area {
+  position: relative;
+  height: 100%;
 }
 
 #lemon-show-area {
+  height: 100%;
   position: absolute;
   z-index: 1;
+  overflow: scroll;
 }
 
 #lemon-focus {
@@ -97,20 +126,391 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: 100%;
+}
+
+#lemon-index-container {
+  height: 100%;
 }
 
 #lemon-index-list {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
   width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+
+// Lemon Index
+
+#lemon-index-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: $pale-white;
 }
 
 .lemon {
+  width: 80%;
   display: inline-block;
-  width: 25%;
-  padding: 1%;
   box-sizing: border-box;
+  cursor: pointer;
+  background-color: $extra-pale-white;
+  padding: 7px;
+  border-radius: 9px;
+}
+
+// #lemon-index-list > .lemon:not(:last-child) {
+//   border-bottom: 1px solid $purple-blue;
+// }
+
+.lemon-top {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lemon-icon {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  width: 15%;
+}
+
+.lemon-location {
+  padding: 4px;
+  width: 55%;
+  display: flex;
+  align-items: center;
+}
+
+.lemon-finder {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  width: 30%;
+}
+
+.lemon-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.lemon-actions > div {
+  padding: 4px 8px;
+  background-color: $blue;
+  border-radius: 4px;
+}
+
+// Lemon Form Button
+
+.open-lemon-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.open-lemon-form {
+  border: 1px solid black;
+  position: absolute;
+  top: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: $yellow;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: .3s
+}
+
+.open-lemon-form:hover {
+  background-color: $light-yellow;
+  color: $higher-opacity-blue;
+}
+
+// Lemon Form
+
+#lemon-form-area-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $light-gray;
+}
+
+#lemon-form-area {
+  width: 60%
+}
+
+#close-lemon-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: $pale-yellow;
+  cursor: pointer;
+  position: absolute;
+}
+
+#lemon-form-topbar {
+  display: flex;
+  width: 100vw;
+  position: relative;
+}
+
+#lemon-form-container {
+  height: 100%;
+  background-color: $white;
+}
+
+#lemon-form-with-heading {
+  height: 100%;
+}
+
+#edit-bar {
+  width: 100%;
+  display: flex;
+  padding: 3px;
+  align-items: center;
+  background-color: $yellow;
+}
+
+#reset-form {
+  padding: 2px 10px;
+  background-color: $gray;
+  cursor: pointer;
+}
+
+#lemon-form-heading {
+  padding: 15px;
+  display: flex;
+  background-color: $light-yellow;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#lemon-form {
+  height: 100%;
+  width: 100%;
+}
+
+#row1 {
+  display: flex;
+}
+
+#latlng {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.latlng-input {
+  width: 4rem;
+}
+
+#latlng-input1 {
+  margin-right: 20px;
+}
+
+.lemon-form-label {
+  margin-bottom: 4px;
+}
+
+#latlng-inputs-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#latlng-label2 {
+  color: $gray;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+#tree-area {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+#note-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+textarea {
+  height: 5rem;
+  margin: 0 15px;
+}
+
+#location {
+  display: inline-block;
+  width: 100%;
+}
+
+#location-name {
+
+}
+
+.label-input {
+  display: flex;
+}
+
+#lemon-form-submit {
+  padding: 10px 20px;
+  background-color: $yellow;
+  border: 1px solid black;
+  margin: 10px 15px 0px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#lemon-form-submit:hover {
+  background-color: $light-yellow;
+  color: $purple-blue;
+}
+
+.input-area {
+  width: 100%;
+}
+
+// Lemon Focus
+
+#lemon-focus {
+  height: 100%;
+  width: 100%;
+}
+
+#lemon-focus-inner {
+  box-sizing: border-box;
+  background-color: $light-gray;
+  padding: 25px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+#lemon-focus-topbar {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+#lemon-focus-bye {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#lemon-focus-bye-inner  {
+  width: 10rem;
+}
+
+#lemon-focus-back {
+  position: absolute;
+  padding: 13px;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  background-color: $pale-yellow;
+  cursor: pointer;
+}
+
+#lemon-focus-header {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lemon-focus-item {
+  height: 100%;
+  width: 100%;
+}
+
+#lemon-focus-lemon {
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+}
+
+#lemon-focus-text {
+  padding: 15px;
+  background-color: $light-gray;
+}
+
+#lemon-focus {
+  width: 100%;
+  height: 100%;
+}
+
+#lemon-modal-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lemon-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+  flex-direction: column;
+  border-radius: 900px;
+  transition: .3s;
+  background-color: $medium-orange;
+}
+
+#lemon-modal-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modalimage {
+  border-radius: 100px;
+  height: 150px;
+  width: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#closebutton {
+  padding: 10px 20px;
+  background-color: $light-gray;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+#robertluvsya {
+  margin: 20px;
+  font-size: 3rem;
+  color: black;
+  text-shadow: 1px 0 0 white, 0 -1px 0 white, 0 1px 0 white, -1px 0 0 white;
 }
 
 // Truck index
@@ -359,8 +759,37 @@ body {
   display: flex;
 }
 
+.column {
+  flex-direction: column;
+}
+
+.start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
 .mr-10 {
   margin-right: 10px;
+}
+
+.m-15 {
+  margin: 15px;
 }
 
 .to-fade-in-fast {
@@ -395,4 +824,74 @@ body {
 .slide-left {
   transform: translateX(-52%);
   transition: transform .75s ease-in-out;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+.w-100 {
+  width: 100%
+}
+
+.Lemon {
+  background-color: $light-yellow;
+}
+
+.Lime {
+  background-color: $lime;
+}
+
+.Orange {
+  background-color: $orange;
+}
+
+.pale-Lemon {
+  background-color: $pale-light-yellow;
+}
+
+.pale-Lime {
+  background-color: $pale-lime;
+}
+
+.pale-Orange {
+  background-color: $pale-orange;
+}
+
+.fancy {
+  font-family: 'Dancing Script', cursive;
+}
+
+.sans {
+  font-family: 'Comic Sans', sans-serif;
+}
+
+
+
+// TWITTER HEART
+.heart {
+  width: 100px;
+  height: 100px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+
+  &.is-active {
+    transition-duration: 1s;
+    background-position: -2800px 0;
+  }
 }
