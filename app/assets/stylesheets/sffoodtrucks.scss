@@ -32,6 +32,7 @@ textarea {
 
 input {
   padding: 5px;
+  font-size: 16px;
 }
 
 select {
@@ -254,7 +255,7 @@ select {
 }
 
 #lemon-form-area {
-  width: 60%
+  width: 90%
 }
 
 #close-lemon-form {
@@ -306,7 +307,6 @@ select {
 }
 
 #lemon-form {
-  height: 100%;
   width: 100%;
 }
 
@@ -360,6 +360,7 @@ select {
 textarea {
   height: 5rem;
   margin: 0 15px;
+  font-size: 16px;
 }
 
 #location {
@@ -406,8 +407,6 @@ textarea {
   background-color: $light-gray;
   padding: 25px;
   width: 100%;
-  height: 100%;
-  overflow: scroll;
 }
 
 #lemon-focus-topbar {
@@ -478,10 +477,11 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   flex-direction: column;
-  border-radius: 900px;
+  border-radius: 400px;
+  overflow: visible;
   transition: .3s;
   background-color: $medium-orange;
 }
