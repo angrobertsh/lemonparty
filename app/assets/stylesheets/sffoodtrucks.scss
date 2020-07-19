@@ -161,7 +161,10 @@ select {
   cursor: pointer;
   background-color: $extra-pale-white;
   padding: 7px;
+  margin-bottom: 10px;
   border-radius: 9px;
+  border: 1px solid $light-gray;
+  box-shadow: 1px 1px 0px $gray;
 }
 
 // #lemon-index-list > .lemon:not(:last-child) {
