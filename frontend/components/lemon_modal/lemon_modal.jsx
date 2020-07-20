@@ -13,11 +13,11 @@ class LemonModal extends React.Component{
     if (!this.state.animate1 && this.props.modalOpen) {
       this.timeoutId = setTimeout(function () {
         this.setState({animate1: true});
-      }.bind(this), 100);
+      }.bind(this), 250);
 
       this.timeoutId2 = setTimeout(function () {
         this.setState({animate2: true});
-      }.bind(this), 400);
+      }.bind(this), 600);
     } else if (!this.props.modalOpen && this.state.animate1) {
       this.setState({animate1: false, animate2: false})
     }

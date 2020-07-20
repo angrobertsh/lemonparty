@@ -37,11 +37,11 @@ class LemonMap extends React.Component{
 
   addEmptyClickListener(){
     google.maps.event.addListener(this.map, 'click', (e) => {
-      this.props.updateLemonForm({lat: e.latLng.lat(), lng: e.latLng.lng()});
-
       let lemons;
 
       if (this.props.formOpen) {
+        this.props.updateLemonForm({lat: e.latLng.lat(), lng: e.latLng.lng()});
+
         let fakeTree = { [-1]: (merge({}, this.props.form, {
           tree: "FAKE", id: -1, lat: e.latLng.lat(), lng: e.latLng.lng(), edit: !!this.props.form.id}
         )) };

@@ -14,10 +14,11 @@ $pale-yellow: rgba(247, 202, 24, .5);
 $light-yellow: rgba(244, 247, 118, 1);
 $pale-light-yellow: rgba(244, 247, 118, .5);
 $gray: rgba(190, 190, 190, 1);
+$medium-gray: rgba(190, 190, 190, .4);
 $light-gray: rgba(190, 190, 190, .1);
 $orange: rgba(255, 215, 142, 1);
 $lime: rgba(157, 251, 75, 1);
-$medium-orange: rgba(255, 215, 142, .875);
+$medium-orange: rgba(255, 215, 142, .9);
 $pale-orange: rgba(255, 215, 142, .5);
 $pale-lime: rgba(157, 251, 75, .5);
 
@@ -69,6 +70,7 @@ select {
 #app-body {
   width: 100vw;
   height: 100%;
+  background-color: $light-gray;
 }
 
 #topbar-container{
@@ -251,7 +253,6 @@ select {
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: $light-gray;
 }
 
 #lemon-form-area {
@@ -404,7 +405,6 @@ textarea {
 
 #lemon-focus-inner {
   box-sizing: border-box;
-  background-color: $light-gray;
   padding: 25px;
   width: 100%;
 }
@@ -477,10 +477,10 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   flex-direction: column;
-  border-radius: 400px;
+  border-radius: 375px;
   overflow: visible;
   transition: .3s;
   background-color: $medium-orange;
@@ -503,7 +503,7 @@ textarea {
 
 #closebutton {
   padding: 10px 20px;
-  background-color: $light-gray;
+  background-color: $medium-gray;
   cursor: pointer;
   border-radius: 4px;
   margin: 10px;
@@ -511,7 +511,7 @@ textarea {
 
 #robertluvsya {
   margin: 20px;
-  font-size: 3rem;
+  font-size: 36px;
   color: black;
   text-shadow: 1px 0 0 white, 0 -1px 0 white, 0 1px 0 white, -1px 0 0 white;
 }

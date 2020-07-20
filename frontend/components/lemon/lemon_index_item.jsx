@@ -11,7 +11,7 @@ const LemonIndexItem = ({lemon, setFocus, editLemon, deleteLemon}) => {
   } else if (lemon.tree === "Orange") {
     icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,h_32/v1592092400/Lemons/hiclipart.com_4.png'
   } else if (lemon.tree === "FAKE") {
-    icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,w_30/v1594751711/Lemons/newsquare.png'
+    icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,w_30/v1595193266/Lemons/newwhiteback.png'
   }
 
   return (
