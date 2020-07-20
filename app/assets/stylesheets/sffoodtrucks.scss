@@ -230,7 +230,7 @@ select {
 .open-lemon-form {
   border: 1px solid black;
   position: absolute;
-  top: -85px;
+  top: -80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -328,6 +328,23 @@ select {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+#lemon-form-heading-text {
+  font-weight: bold;
+}
+
+.slowbounce {
+  -webkit-animation: slowbounce 1s infinite; /* Safari 4.0 - 8.0 */
+  animation: slowbounce 1s infinite;
+}
+
+@keyframes slowbounce {
+    0%   {transform: translateY(-3px);}
+    40%  {transform: translateY(.5px);}
+    50%  {transform: translateY(1px);}
+    60%  {transform: translateY(.5px);}
+    100% {transform: translateY(-3px);}
 }
 
 #lemon-form {

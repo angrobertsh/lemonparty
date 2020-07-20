@@ -28,7 +28,9 @@ class LemonForm extends React.Component{
               <div id="lemon-form-topbar">
                 <div id="close-lemon-form" onClick={this.props.toggleLemonForm}>Close</div>
                 <div id="lemon-form-heading">
-                  Click the map to set your tree!
+                  <div id="lemon-form-heading-text" className="slowbounce">
+                    Click the map to set your tree!
+                  </div>
                 </div>
               </div>
               <div id="lemon-form-area-container">
