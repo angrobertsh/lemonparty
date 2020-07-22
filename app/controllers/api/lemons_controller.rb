@@ -1,7 +1,7 @@
 class Api::LemonsController < ApplicationController
 
   def index
-    @lemons = Lemon.in_bounds(params[:filters][:bounds])
+    @lemons = Lemon.in_bounds(params[:filters][:bounds]).where(hide: false)
   end
 
   def create

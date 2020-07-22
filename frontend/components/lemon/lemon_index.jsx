@@ -12,7 +12,7 @@ class LemonIndex extends React.Component{
   }
 
   renderLemons(){
-    let lemons = Object.keys(this.props.lemons);
+    let lemons = Object.keys(this.props.lemons).reverse();
     return lemons.length === 0 ? <div className="lemon">No lemon trees in this area. </div> : lemons.map((key) => (<LemonIndexItemContainer key={key} lemon={this.props.lemons[key]} />));
   }
 
