@@ -34,7 +34,7 @@ const LemonFocus = ({lemon, clearFocus}) => {
       <div id="lemon-focus">
         <div id="lemon-focus-item">
           <div id="lemon-focus-topbar">
-            <button id="lemon-focus-back" onClick={ clearFocus }>Back</button>
+            <div id="lemon-focus-back" onClick={ clearFocus }>Back</div>
             <div id="lemon-focus-header" className={lemon.tree}>
               {`A ${description} ${lemon.tree} Tree`}
             </div>

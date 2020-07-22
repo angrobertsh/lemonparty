@@ -76,7 +76,7 @@ select {
 #topbar-container{
   display: flex;
   justify-content: center;
-  padding: 15px 0 15px 0;
+  padding: 12px 0;
   background-image: image-url("plate.jpg");
   background-size: cover;
   background-position: center;
@@ -95,12 +95,12 @@ select {
 
 #map-container-container {
   width: 100%;
-  min-height: 400px;
+  min-height: 375px;
 }
 
 #map-container {
   width: 100%;
-  min-height: 400px;
+  min-height: 375px;
 }
 
 #lemon-data-area {
@@ -290,6 +290,7 @@ select {
   background-color: $pale-yellow;
   cursor: pointer;
   position: absolute;
+  border-right: 1px solid $light-gray;
 }
 
 #lemon-form-topbar {
@@ -328,6 +329,8 @@ select {
   align-items: center;
   justify-content: center;
   width: 100%;
+  border-bottom: 1px solid $light-gray;
+  box-sizing: border-box;
 }
 
 #lemon-form-heading-text {
@@ -466,12 +469,10 @@ textarea {
 
 #lemon-focus-back {
   position: absolute;
-  padding: 13px;
-  border: none;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1rem;
+  padding: 15px;
   background-color: $pale-yellow;
   cursor: pointer;
+  border-right: 1px solid $light-gray;
 }
 
 #lemon-focus-header {
@@ -480,6 +481,8 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid $light-gray;
+  box-sizing: border-box;
 }
 
 #lemon-focus-item {

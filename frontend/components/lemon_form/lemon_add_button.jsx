@@ -11,7 +11,7 @@ class LemonAddButton extends React.Component{
   componentDidMount() {
     this.timeoutId = setTimeout(function () {
       this.setState({sheen: false});
-    }.bind(this), 7500);
+    }.bind(this), 5000);
   }
 
   componentWillUnmount () {
