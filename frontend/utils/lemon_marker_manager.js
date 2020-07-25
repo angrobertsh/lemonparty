@@ -1,34 +1,46 @@
-export default class MarkerManager{
+export default class LemonMarkerManager{
   constructor(map, markerClick){
     this.map = map;
     this.markers = [];
     this.markerClick = markerClick;
     this.removeOldMarkers = this.removeOldMarkers.bind(this);
     this.removeMarker = this.removeMarker.bind(this);
+    this.stopAllBounces = this.stopAllBounces.bind(this);
     this.addNewMarkers = this.addNewMarkers.bind(this);
     this.createMarkerFromLemon = this.createMarkerFromLemon.bind(this);
-    this.stopAllBounces = this.stopAllBounces.bind(this);
     this.bounce = this.bounce.bind(this);
   }
 
   updateMarkers(lemons, focus){
     let lemonIds = Object.keys(lemons).map((el) => (parseInt(el)));
-    if(!focus){
-      this.stopAllBounces();
-    }
+
     if(lemonIds.includes(-1)){
-      this.markers.filter((marker) => marker.lemonId === -1).forEach((marker) => {
-        if (lemons[-1].lat !== marker.position.lat() && lemons[-1].lng !== marker.position.lng()){
-          this.removeMarker(marker)
-        }
-      })
+      this.removeNewMarker(lemons);
     }
+
     this.addNewMarkers(lemonIds, lemons, focus);
     this.removeOldMarkers(lemonIds);
+
+    if(!lemonIds.includes(-1) && !!focus){
+      this.stopAllBounces(focus.id);
+      this.bounce(focus);
+    } else {
+      this.stopAllBounces();
+    }
+  }
+
+  removeNewMarker(lemons){
+    this.markers.filter((marker) => marker.lemonId === -1).forEach((marker) => {
+      if (lemons[-1].lat !== marker.position.lat() && lemons[-1].lng !== marker.position.lng()){
+        this.removeMarker(marker)
+      }
+    })
   }
 
   removeOldMarkers(lemonIds){
-    this.markers.filter( (marker) => !lemonIds.includes(marker.lemonId)).forEach((marker) => (this.removeMarker(marker)));
+    this.markers.filter(
+      (marker) => !lemonIds.includes(marker.lemonId)
+    ).forEach((marker) => (this.removeMarker(marker)));
   }
 
   removeMarker(marker){
@@ -44,9 +56,6 @@ export default class MarkerManager{
         this.createMarkerFromLemon(lemons[lemonId]);
       }
     })
-    if(!!focus){
-      this.bounce(focus)
-    }
   }
 
   createMarkerFromLemon(lemon){
@@ -70,7 +79,9 @@ export default class MarkerManager{
     });
     marker.setAnimation(null);
     if (marker.lemonId !== -1) {
-      marker.addListener('click', () => this.markerClick(lemon));
+      marker.addListener('click', () => {
+        this.markerClick(lemon)
+      });
     }
     this.markers.push(marker);
   }
@@ -78,17 +89,22 @@ export default class MarkerManager{
   bounce(lemon) {
     let marker = this.markers.find((marker) => lemon.id === marker.lemonId )
     if (!!marker) {
-      if (marker.getAnimation() !== null) {
-        this.stopAllBounces();
-      } else {
-        this.stopAllBounces();
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-      }
+      marker.setAnimation(google.maps.Animation.BOUNCE);
     }
   }
 
-  stopAllBounces(){
-    this.markers.forEach((marker) => marker.setAnimation(null))
+  stopAllBounces(lemonId = null){
+    let markers = this.markers;
+
+    if (lemonId) {
+      markers = markers.filter(marker => marker.lemonId !== lemonId)
+    }
+
+    markers.forEach((marker) => {
+      if (marker.getAnimation() !== null) {
+        marker.setAnimation(null)
+      }
+    })
   }
 
 }
