@@ -14,6 +14,7 @@ $pale-yellow: rgba(247, 202, 24, .5);
 $light-yellow: rgba(244, 247, 118, 1);
 $pale-light-yellow: rgba(244, 247, 118, .5);
 $gray: rgba(190, 190, 190, 1);
+$medium-heavy-gray: rgba(190, 190, 190, .75);
 $medium-gray: rgba(190, 190, 190, .5);
 $light-gray: rgba(190, 190, 190, .2);
 $lightest-gray: rgba(255, 255, 255, .05);
@@ -66,28 +67,6 @@ select {
     background-position: center;
     background-color: black;
   }
-  // background-image: image-url("truck_background.png");
-  // min-height: 100vh;
-}
-
-.lemon-bg-1 {
-  background-image: image-url("lemon.jpg");
-}
-.lemon-bg-2 {
-  background-image: image-url("lemon2.jpg");
-}
-.lemon-bg-3 {
-  background-image: image-url("lemon3.gif");
-}
-.lemon-bg-4 {
-  background-image: image-url("lemon4.gif");
-}
-.lemon-bg-5 {
-  background-image: image-url("lemon5.gif");
-}
-.lemon-bg-6 {
-  background-image: image-url("lemon6.jpg");
-  background-size: cover;
 }
 
 #app {
@@ -230,7 +209,7 @@ select {
   @media screen and (min-width: 900px) {
     padding: 25px;
     font-size: 1.5rem;
-    background-color: $gray;
+    background-color: $medium-heavy-gray;
   }
 }
 
@@ -664,6 +643,61 @@ textarea {
   font-size: 36px;
   color: black;
   text-shadow: 1px 0 0 white, 0 -1px 0 white, 0 1px 0 white, -1px 0 0 white;
+}
+
+// BG changer
+
+.lemon-bg-1 {
+  background-image: image-url("lemon.gif") !important;
+  background-size: contain !important;
+}
+.lemon-bg-2 {
+  background-image: image-url("lemon2.jpg") !important;
+  background-size: contain !important;
+}
+.lemon-bg-3 {
+  background-image: image-url("lemon3.gif") !important;
+  background-size: contain !important;
+}
+.lemon-bg-4 {
+  background-image: image-url("lemon4.gif") !important;
+  background-size: contain !important;
+}
+.lemon-bg-5 {
+  background-image: image-url("lemon5.gif") !important;
+  background-size: contain !important;
+}
+.lemon-bg-6 {
+  background-image: image-url("lemon6.jpg") !important;
+  background-size: cover !important;
+}
+.lemon-bg-7 {
+  background-image: image-url("lemon7.jpg") !important;
+  background-size: cover !important;
+}
+.lemon-bg-8 {
+  background-image: image-url("lemon8.gif") !important;
+  background-size: contain !important;
+}
+.lemon-bg-9 {
+  background-image: image-url("lemon9.jpg") !important;
+  background-size: cover !important;
+}
+
+#lemon-bg-changer{
+  display: none;
+
+  @media screen and (min-width: 900px) {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: image-url("lemon_cross.png");
+    background-size: contain;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
 }
 
 // Truck index

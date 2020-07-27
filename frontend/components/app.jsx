@@ -1,11 +1,13 @@
 import React from 'react';
 import Topbar from './topbar/topbar';
 import LemonContainerContainer from './lemon/lemon_container_container';
+import LemonBackgroundChanger from './lemon/lemon_background_changer';
 import LemonModalContainer from './lemon_modal/lemon_modal_container';
 
 const App = () => (
   <div id="page">
     <LemonModalContainer />
+    <LemonBackgroundChanger />
     <div id="app">
       <Topbar />
       <LemonContainerContainer />
