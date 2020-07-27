@@ -28,6 +28,8 @@ const LemonFocus = ({lemon, clearFocus}) => {
       icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,h_32/v1592092400/Lemons/hiclipart.com_4.png'
     } else if (lemon.tree === "FAKE") {
       icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,w_30/v1595193266/Lemons/newwhiteback.png'
+    } else if (lemon.tree === "REAL") {
+      icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,h_41/v1595824487/Lemons/Screen_Shot_2020-07-26_at_9.29.31_PM.png'
     }
 
     return (

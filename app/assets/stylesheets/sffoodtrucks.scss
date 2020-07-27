@@ -61,7 +61,7 @@ select {
 
   @media screen and (min-width: 900px) {
     background-image: image-url("lemon6.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;

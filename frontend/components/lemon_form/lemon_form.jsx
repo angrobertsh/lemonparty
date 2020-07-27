@@ -19,6 +19,7 @@ class LemonForm extends React.Component{
 
   render(){
     const lemon = this.props.formLemon;
+    let editModeCheck = sessionStorage.getItem("robertslemonpartykey") === 'xe8v6pai7ct';
 
     if (this.props.formOpen) {
       return (
@@ -66,6 +67,7 @@ class LemonForm extends React.Component{
                         <option value="Lemon">Lemon</option>
                         <option value="Lime">Lime</option>
                         <option value="Orange">Orange</option>
+                        { editModeCheck && <option value="REAL">REAL</option>}
                       </select>
                     </div>
 

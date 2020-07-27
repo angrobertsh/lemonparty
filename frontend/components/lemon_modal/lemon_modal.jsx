@@ -34,11 +34,9 @@ class LemonModal extends React.Component{
 
   render(){
     const hide = this.props.modalOpen ? "" : "hide"
-    // const hide = ""
     const isActive1 = this.state.animate1 ? "is-active" : ""
     const isActive2 = this.state.animate2 ? "is-active" : ""
     const src = "https://res.cloudinary.com/dujcpxlhk/image/upload/v1595160381/Lemons/IMG_3145.jpg"
-    // const src = "https://res.cloudinary.com/dujcpxlhk/image/upload/v1595161235/Lemons/59924_10100129436684653_5357116_n.jpg"
 
     const style = {
       backgroundImage: `url(${src})`
