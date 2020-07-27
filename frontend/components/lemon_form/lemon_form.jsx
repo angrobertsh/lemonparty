@@ -51,7 +51,9 @@ class LemonForm extends React.Component{
                   </div>
                   { lemon && lemon.id &&
                     <div id="edit-bar">
-                      {`Editing tree at ${lemon.location}`}
+                      <div>
+                        {`Editing tree at ${lemon.location}`}
+                      </div>
                       <div id="reset-form" onClick={this.props.clearLemonForm}>Reset</div>
                     </div>
                   }

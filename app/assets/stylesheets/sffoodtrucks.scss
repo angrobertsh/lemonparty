@@ -6,7 +6,7 @@ $brown: rgba(0, 0, 71, 1);
 $light-brown: rgba(211, 178, 149, .5);
 $dark-brown: rgba(36, 22, 22, .2);
 $white: rgba(255, 255, 255, 1);
-$pale-white: rgba(160, 160, 160, .2);
+$pale-white: rgba(160, 160, 160, .3);
 $extra-pale-white: rgba(255, 255, 255, .75);
 $purple-blue: rgba(16, 0, 76, .6);
 $yellow: rgba(247, 202, 24, 1);
@@ -14,8 +14,9 @@ $pale-yellow: rgba(247, 202, 24, .5);
 $light-yellow: rgba(244, 247, 118, 1);
 $pale-light-yellow: rgba(244, 247, 118, .5);
 $gray: rgba(190, 190, 190, 1);
-$medium-gray: rgba(190, 190, 190, .4);
-$light-gray: rgba(190, 190, 190, .1);
+$medium-gray: rgba(190, 190, 190, .5);
+$light-gray: rgba(190, 190, 190, .2);
+$lightest-gray: rgba(255, 255, 255, .05);
 $orange: rgba(255, 215, 142, 1);
 $lime: rgba(157, 251, 75, 1);
 $medium-orange: rgba(255, 215, 142, .9);
@@ -53,9 +54,40 @@ select {
 // App Containers and header bars
 
 #root {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 900px) {
+    background-image: image-url("lemon6.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+  }
   // background-image: image-url("truck_background.png");
-  // background-size: cover;
   // min-height: 100vh;
+}
+
+.lemon-bg-1 {
+  background-image: image-url("lemon.jpg");
+}
+.lemon-bg-2 {
+  background-image: image-url("lemon2.jpg");
+}
+.lemon-bg-3 {
+  background-image: image-url("lemon3.gif");
+}
+.lemon-bg-4 {
+  background-image: image-url("lemon4.gif");
+}
+.lemon-bg-5 {
+  background-image: image-url("lemon5.gif");
+}
+.lemon-bg-6 {
+  background-image: image-url("lemon6.jpg");
+  background-size: cover;
 }
 
 #app {
@@ -65,12 +97,23 @@ select {
 }
 
 #page {
+  @media screen and (min-width: 900px) {
+    width: 80%;
+  }
 }
 
 #app-body {
   width: 100vw;
   height: 100%;
   background-color: $light-gray;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 900px) {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
 }
 
 #topbar-container{
@@ -81,11 +124,10 @@ select {
   background-size: cover;
   background-position: center;
   width: 100vw;
-}
 
-#app-body {
-  display: flex;
-  flex-direction: column;
+  @media screen and (min-width: 900px) {
+    width: auto
+  }
 }
 
 .title {
@@ -96,16 +138,32 @@ select {
 #map-container-container {
   width: 100%;
   min-height: 375px;
+
+  @media screen and (min-width: 900px) {
+    width: 50%;
+    height: 550px;
+  }
 }
 
 #map-container {
   width: 100%;
   min-height: 375px;
+
+  @media screen and (min-width: 900px) {
+    height: 550px;
+  }
 }
 
 #lemon-data-area {
   position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 900px) {
+    flex-direction: column-reverse;
+    width: 50%;
+  }
 }
 
 #lemon-show-area {
@@ -113,6 +171,10 @@ select {
   position: absolute;
   z-index: 1;
   overflow: scroll;
+
+  @media screen and (min-width: 900px) {
+    width: 100%;
+  }
 }
 
 #lemon-focus {
@@ -130,6 +192,11 @@ select {
   flex-direction: column;
   width: 100vw;
   height: 100%;
+
+  @media screen and (min-width: 900px) {
+    background-color: $extra-pale-white;
+    width: 100%;
+  }
 }
 
 #lemon-index-container {
@@ -144,6 +211,10 @@ select {
   padding: 15px;
   box-sizing: border-box;
   align-items: center;
+
+  @media screen and (min-width: 900px) {
+    margin-bottom: 100px;
+  }
 }
 
 
@@ -155,6 +226,12 @@ select {
   justify-content: center;
   padding: 15px;
   background-color: $pale-white;
+
+  @media screen and (min-width: 900px) {
+    padding: 25px;
+    font-size: 1.5rem;
+    background-color: $gray;
+  }
 }
 
 .lemon {
@@ -225,6 +302,10 @@ select {
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media screen and (min-width: 900px) {
+    z-index: 5;
+  }
 }
 
 .open-lemon-form {
@@ -239,7 +320,7 @@ select {
   background-color: $yellow;
   margin-top: 10px;
   border-radius: 5px;
-  transition: .3s
+  transition: .3s;
 }
 
 .sheen {
@@ -297,11 +378,20 @@ select {
   display: flex;
   width: 100vw;
   position: relative;
+
+  @media screen and (min-width: 900px) {
+    width: auto;
+  }
 }
 
 #lemon-form-container {
   height: 100%;
   background-color: $white;
+
+  @media screen and (min-width: 900px) {
+    background-color: $extra-pale-white;
+    position: static;
+  }
 }
 
 #lemon-form-with-heading {
@@ -312,8 +402,12 @@ select {
   width: 100%;
   display: flex;
   padding: 3px;
-  align-items: center;
+  justify-content: space-between;
   background-color: $yellow;
+
+  @media screen and (min-width: 900px) {
+    padding: 5px;
+  }
 }
 
 #reset-form {
@@ -329,7 +423,6 @@ select {
   align-items: center;
   justify-content: center;
   width: 100%;
-  border-bottom: 1px solid $light-gray;
   box-sizing: border-box;
 }
 
@@ -481,24 +574,36 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid $light-gray;
   box-sizing: border-box;
 }
 
 #lemon-focus-item {
   height: 100%;
   width: 100%;
+
+  @media screen and (min-width: 900px) {
+    background-color: $extra-pale-white;
+  }
 }
 
 #lemon-focus-lemon {
   height: 100%;
   width: 100%;
   background-color: $white;
+
+  @media screen and (min-width: 900px) {
+    height: auto;
+    background-color: transparent;
+  }
 }
 
 #lemon-focus-text {
-  padding: 15px;
+  padding: 25px;
   background-color: $light-gray;
+
+  @media screen and (min-width: 900px) {
+    background-color: $medium-gray;
+  }
 }
 
 #lemon-focus {
@@ -508,6 +613,8 @@ textarea {
 
 #lemon-modal-container {
   position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   z-index: 100;
