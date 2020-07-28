@@ -62,7 +62,7 @@ const LemonReducer = (state = defaultState, action) => {
       newState = merge(newState, {modalOpen: action.val});
       return newState
     case "RECEIVE_LEMON_ERRORS":
-      newState = merge(newState, {errors: action.errors});
+      newState = merge(newState, {errors: null}, {errors: action.errors});
       return newState;
     case "REMOVE_LEMON":
       newLemons = merge({}, Object.keys(state.lemons).reduce((acc, lemonId) => {
