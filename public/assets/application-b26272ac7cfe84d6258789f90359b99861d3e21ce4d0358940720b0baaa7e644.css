@@ -186,7 +186,7 @@ select {
 @media screen and (min-width: 900px) {
   /* line 84, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
   #app-body {
-    flex-direction: row;
+    flex-direction: row-reverse;
     width: 100%;
     height: auto;
   }

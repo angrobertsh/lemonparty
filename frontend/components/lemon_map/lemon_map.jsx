@@ -13,8 +13,8 @@ class LemonMap extends React.Component{
 
   componentDidMount() {
     const mapOptions = {
-      center: { lat: 37.916134, lng: -122.310768 },
-      zoom: 14
+      center: { lat: 37.916775, lng: -122.302917 },
+      zoom: 15
     }
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
