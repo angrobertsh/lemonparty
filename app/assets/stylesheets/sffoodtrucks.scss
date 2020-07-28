@@ -192,7 +192,8 @@ select {
   align-items: center;
 
   @media screen and (min-width: 900px) {
-    margin-bottom: 100px;
+    height: 100%;
+    border-bottom: 100px solid $pale-white;
   }
 }
 
@@ -567,6 +568,8 @@ textarea {
 
   @media screen and (min-width: 900px) {
     background-color: $extra-pale-white;
+    box-sizing: border-box;
+    border-bottom: 100px solid $pale-white;
   }
 }
 
