@@ -269,8 +269,8 @@ select {
 }
 
 .lemon-actions > div {
-  padding: 4px 8px;
-  background-color: $blue;
+  padding: 5px 10px;
+  background-color: $gray;
   border-radius: 4px;
 }
 
@@ -340,6 +340,10 @@ select {
 
 #lemon-form-area {
   width: 90%
+}
+
+#lemon-errors {
+  padding: 0 15px;
 }
 
 #close-lemon-form {

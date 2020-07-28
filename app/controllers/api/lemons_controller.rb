@@ -9,7 +9,7 @@ class Api::LemonsController < ApplicationController
     if @lemon.save
       render "api/lemons/show"
     else
-      @errors = @lemon.errors.full_messages
+      @errors = @lemon.errors.full_messages.map{|e| e.gsub("Location", "Description").gsub("Finder", "Your name").gsub("Note", "A nice note to Robert") }
       render(
         "api/shared/error",
         status: 422
@@ -23,7 +23,7 @@ class Api::LemonsController < ApplicationController
     if @lemon.update(lemon_params)
       render "api/lemons/show"
     else
-      @errors = @lemon.errors.full_messages
+      @errors = @lemon.errors.full_messages.map{|e| e.gsub("Location", "Description").gsub("Finder", "Your name").gsub("Note", "A nice note to Robert") }
       render(
         "api/shared/error",
         status: 422
