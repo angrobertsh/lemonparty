@@ -659,10 +659,6 @@ textarea {
   background-image: image-url("lemon.gif") !important;
   background-size: contain !important;
 }
-.lemon-bg-2 {
-  background-image: image-url("lemon2.jpg") !important;
-  background-size: contain !important;
-}
 .lemon-bg-3 {
   background-image: image-url("lemon3.gif") !important;
   background-size: contain !important;
@@ -679,17 +675,9 @@ textarea {
   background-image: image-url("lemon6.jpg") !important;
   background-size: cover !important;
 }
-.lemon-bg-7 {
-  background-image: image-url("lemon7.jpg") !important;
-  background-size: cover !important;
-}
 .lemon-bg-8 {
   background-image: image-url("lemon8.gif") !important;
   background-size: contain !important;
-}
-.lemon-bg-9 {
-  background-image: image-url("lemon9.jpg") !important;
-  background-size: cover !important;
 }
 
 #lemon-bg-changer{
@@ -699,7 +687,7 @@ textarea {
     display: block;
     width: 15px;
     height: 15px;
-    background-image: image-url("lemon_cross.png");
+    background-image: image-url("lemon_side.png");
     background-size: contain;
     position: fixed;
     bottom: 5px;
