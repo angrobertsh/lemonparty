@@ -1,8 +1,11 @@
 import merge from 'lodash/merge';
 
+const randomLat = (Math.random() * (37.9244937846925 - 37.9091569840984)) + 37.9091569840984
+const randomLng = (Math.random() * (-122.309903483932 - (-122.298015933578))) - 122.298015933578
+
 const defaultForm = {
-  lat: 37.916134,
-  lng: -122.310768,
+  lat: randomLat,
+  lng: randomLng,
   tree: "Lemon",
   location: "",
   note: "",
