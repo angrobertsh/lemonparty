@@ -15,8 +15,7 @@ const adjective = {
 
 const LemonFocus = ({lemon, clearFocus}) => {
   if (lemon) {
-    const date = Date.now();
-    const description = adjective[date.toString()[date.toString().length-1]]
+    const description = adjective[lemon.id.toString()[lemon.id.toString().length-1]]
 
     let icon;
 
