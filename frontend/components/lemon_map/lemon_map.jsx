@@ -69,7 +69,7 @@ class LemonMap extends React.Component{
   render(){
     return (
       <div id='map-container-container'>
-        <div id='map-container' className='to-fade-in' ref={ map => this.mapNode = map }></div>
+        <div id='map-container' className='to-fade-in-slower' ref={ map => this.mapNode = map }></div>
       </div>
     );
   }

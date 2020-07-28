@@ -6,7 +6,7 @@ const adjective = {
   2: "Glorious",
   3: "Raggedy-ass",
   4: "Lovely",
-  5: "Literate",
+  5: "Ravishing",
   6: "Plumpcious",
   7: "Wrathful",
   8: "Yummo",
