@@ -63,7 +63,7 @@ class LemonForm extends React.Component{
                       <div id="tree-label" className="lemon-form-label">
                         Tree:
                       </div>
-                      <select name="tree" value={lemon.tree} onChange={this.updateFormLemon}>
+                      <select id="tree-select" name="tree" value={lemon.tree} onChange={this.updateFormLemon}>
                         <option value="Lemon">Lemon</option>
                         <option value="Lime">Lime</option>
                         <option value="Orange">Orange</option>
