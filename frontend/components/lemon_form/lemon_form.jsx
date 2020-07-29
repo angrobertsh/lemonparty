@@ -58,9 +58,9 @@ class LemonForm extends React.Component{
                       <div id="reset-form" onClick={this.props.clearLemonForm}>Reset</div>
                     </div>
                   }
-                  <div className="input-area flex align-center">
-                    <div className="flex column start m-15 flex-1">
-                      <div className="lemon-form-label">
+                  <div id="tree-desc">
+                    <div id="tree-container">
+                      <div id="tree-label" className="lemon-form-label">
                         Tree:
                       </div>
                       <select name="tree" value={lemon.tree} onChange={this.updateFormLemon}>
@@ -71,11 +71,11 @@ class LemonForm extends React.Component{
                       </select>
                     </div>
 
-                    <div className="flex column start m-15 flex-4">
+                    <div id="desc-label">
                       <div className="lemon-form-label">
                         Description:
                       </div>
-                      <div className="flex center w-100">
+                      <div id="desc-input">
                         <input type="text" id="location" name="location" placeholder="Description" value={lemon.location} onChange={this.updateFormLemon} />
                       </div>
                     </div>

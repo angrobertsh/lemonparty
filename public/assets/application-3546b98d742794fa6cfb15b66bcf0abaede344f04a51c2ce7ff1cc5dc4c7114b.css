@@ -327,6 +327,7 @@ select {
   justify-content: center;
   padding: 15px;
   background-color: rgba(160, 160, 160, 0.3);
+  font-weight: bold;
 }
 @media screen and (min-width: 900px) {
   /* line 204, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
@@ -337,7 +338,7 @@ select {
   }
 }
 
-/* line 218, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 219, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon {
   width: 80%;
   display: inline-block;
@@ -351,7 +352,7 @@ select {
   box-shadow: 1px 1px 0px #bebebe;
 }
 
-/* line 235, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 236, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-top {
   padding: 0;
   margin: 0;
@@ -360,7 +361,7 @@ select {
   justify-content: space-between;
 }
 
-/* line 243, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 244, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-icon {
   display: flex;
   align-items: center;
@@ -368,7 +369,7 @@ select {
   width: 15%;
 }
 
-/* line 250, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 251, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-location {
   padding: 4px;
   width: 55%;
@@ -376,7 +377,7 @@ select {
   align-items: center;
 }
 
-/* line 257, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 258, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-finder {
   display: flex;
   align-items: center;
@@ -384,7 +385,7 @@ select {
   width: 30%;
 }
 
-/* line 264, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 265, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-actions {
   display: flex;
   align-items: center;
@@ -394,14 +395,14 @@ select {
   width: 100%;
 }
 
-/* line 273, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 274, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-actions > div {
   padding: 5px 10px;
   background-color: #bebebe;
   border-radius: 4px;
 }
 
-/* line 281, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 282, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .open-lemon-form-container {
   display: flex;
   align-items: center;
@@ -409,13 +410,13 @@ select {
   position: relative;
 }
 @media screen and (min-width: 900px) {
-  /* line 281, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+  /* line 282, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
   .open-lemon-form-container {
     z-index: 5;
   }
 }
 
-/* line 292, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 293, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .open-lemon-form {
   border: 1px solid black;
   position: absolute;
@@ -431,13 +432,13 @@ select {
   transition: .3s;
 }
 
-/* line 307, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 308, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .sheen {
   position: absolute;
   overflow: hidden;
 }
 
-/* line 312, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 313, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .sheen:after {
   animation: sheen 1s 0s infinite;
   content: '';
@@ -455,30 +456,30 @@ select {
     transform: rotateZ(60deg) translate(0, -4em);
   }
 }
-/* line 330, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 331, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .open-lemon-form:hover {
   background-color: #f4f776;
   color: rgba(89, 117, 156, 0.95);
 }
 
-/* line 337, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 338, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form-area-container {
   height: 100%;
   display: flex;
   justify-content: center;
 }
 
-/* line 343, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 344, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form-area {
   width: 90%;
 }
 
-/* line 347, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 348, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-errors {
   padding: 0 15px;
 }
 
-/* line 351, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 352, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #close-lemon-form {
   display: flex;
   align-items: center;
@@ -490,38 +491,38 @@ select {
   border-right: 1px solid rgba(190, 190, 190, 0.2);
 }
 
-/* line 362, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 363, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form-topbar {
   display: flex;
   width: 100vw;
   position: relative;
 }
 @media screen and (min-width: 900px) {
-  /* line 362, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+  /* line 363, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
   #lemon-form-topbar {
     width: auto;
   }
 }
 
-/* line 372, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 373, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form-container {
   height: 100%;
   background-color: white;
 }
 @media screen and (min-width: 900px) {
-  /* line 372, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+  /* line 373, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
   #lemon-form-container {
     background-color: rgba(255, 255, 255, 0.75);
     position: static;
   }
 }
 
-/* line 382, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 383, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form-with-heading {
   height: 100%;
 }
 
-/* line 386, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 387, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #edit-bar {
   width: 100%;
   display: flex;
@@ -530,20 +531,20 @@ select {
   background-color: #f7ca18;
 }
 @media screen and (min-width: 900px) {
-  /* line 386, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+  /* line 387, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
   #edit-bar {
     padding: 5px;
   }
 }
 
-/* line 398, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 399, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #reset-form {
   padding: 2px 10px;
   background-color: #bebebe;
   cursor: pointer;
 }
 
-/* line 404, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 405, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form-heading {
   padding: 15px;
   display: flex;
@@ -554,12 +555,45 @@ select {
   box-sizing: border-box;
 }
 
-/* line 414, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 415, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form-heading-text {
   font-weight: bold;
 }
 
-/* line 418, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 419, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+#tree-desc {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* line 425, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+#tree-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin: 15px;
+}
+
+/* line 433, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+#desc-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 15px;
+  flex: 4;
+}
+
+/* line 441, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+#desc-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* line 448, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .slowbounce {
   -webkit-animation: slowbounce 1s infinite;
   /* Safari 4.0 - 8.0 */
@@ -583,17 +617,17 @@ select {
     transform: translateY(-3px);
   }
 }
-/* line 431, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 461, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form {
   width: 100%;
 }
 
-/* line 435, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 465, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #row1 {
   display: flex;
 }
 
-/* line 439, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 469, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #latlng {
   padding: 15px;
   display: flex;
@@ -601,50 +635,50 @@ select {
   align-items: flex-start;
 }
 
-/* line 446, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 476, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .latlng-input {
   width: 4rem;
 }
 
-/* line 450, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 480, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #latlng-input1 {
   margin-right: 20px;
 }
 
-/* line 454, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 484, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-form-label {
   margin-bottom: 4px;
 }
 
-/* line 458, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 488, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #latlng-inputs-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-/* line 464, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 494, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #latlng-label2 {
   color: #bebebe;
   font-size: 12px;
   margin-top: 5px;
 }
 
-/* line 470, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 500, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #tree-area {
   display: flex;
   align-items: flex-start;
   padding: 15px;
 }
 
-/* line 476, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 506, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #note-submit {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* line 482, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 512, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 textarea {
   padding: 5px;
   height: 5rem;
@@ -652,18 +686,18 @@ textarea {
   font-size: 16px;
 }
 
-/* line 489, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 519, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #location {
   display: inline-block;
   width: 100%;
 }
 
-/* line 498, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 528, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .label-input {
   display: flex;
 }
 
-/* line 502, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 532, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form-submit {
   padding: 10px 20px;
   background-color: #f7ca18;
@@ -674,49 +708,49 @@ textarea {
   transition: .3s;
 }
 
-/* line 512, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 542, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-form-submit:hover {
   background-color: #f4f776;
   color: rgba(16, 0, 76, 0.6);
 }
 
-/* line 517, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 547, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .input-area {
   width: 100%;
 }
 
-/* line 523, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 553, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus {
   height: 100%;
   width: 100%;
 }
 
-/* line 528, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 558, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus-inner {
   box-sizing: border-box;
   padding: 25px;
   width: 100%;
 }
 
-/* line 534, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 564, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus-topbar {
   width: 100%;
   display: flex;
   position: relative;
 }
 
-/* line 540, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 570, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus-bye {
   display: flex;
   justify-content: flex-end;
 }
 
-/* line 545, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 575, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus-bye-inner {
-  width: 10rem;
+  width: 8rem;
 }
 
-/* line 549, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 579, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus-back {
   position: absolute;
   padding: 15px;
@@ -725,7 +759,7 @@ textarea {
   border-right: 1px solid rgba(190, 190, 190, 0.2);
 }
 
-/* line 557, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 587, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus-header {
   padding: 15px;
   width: 100%;
@@ -735,13 +769,13 @@ textarea {
   box-sizing: border-box;
 }
 
-/* line 566, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 596, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus-item {
   height: 100%;
   width: 100%;
 }
 @media screen and (min-width: 900px) {
-  /* line 566, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+  /* line 596, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
   #lemon-focus-item {
     background-color: rgba(255, 255, 255, 0.75);
     box-sizing: border-box;
@@ -749,39 +783,39 @@ textarea {
   }
 }
 
-/* line 577, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 607, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus-lemon {
   height: 100%;
   width: 100%;
   background-color: white;
 }
 @media screen and (min-width: 900px) {
-  /* line 577, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+  /* line 607, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
   #lemon-focus-lemon {
     height: auto;
     background-color: transparent;
   }
 }
 
-/* line 588, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 618, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus-text {
   padding: 25px;
   background-color: rgba(190, 190, 190, 0.2);
 }
 @media screen and (min-width: 900px) {
-  /* line 588, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+  /* line 618, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
   #lemon-focus-text {
     background-color: rgba(190, 190, 190, 0.75);
   }
 }
 
-/* line 597, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 627, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-focus {
   width: 100%;
   height: 100%;
 }
 
-/* line 602, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 632, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-modal-container {
   position: fixed;
   top: 0;
@@ -794,7 +828,7 @@ textarea {
   align-items: center;
 }
 
-/* line 614, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 644, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-modal {
   display: flex;
   justify-content: center;
@@ -808,14 +842,14 @@ textarea {
   background-color: rgba(255, 215, 142, 0.9);
 }
 
-/* line 627, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 657, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-modal-images {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* line 633, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 663, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #modalimage {
   border-radius: 100px;
   height: 150px;
@@ -825,7 +859,7 @@ textarea {
   background-size: contain;
 }
 
-/* line 642, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 672, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #closebutton {
   padding: 10px 20px;
   background-color: rgba(190, 190, 190, 0.5);
@@ -834,7 +868,7 @@ textarea {
   margin: 10px;
 }
 
-/* line 650, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 680, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #robertluvsya {
   margin: 20px;
   font-size: 36px;
@@ -842,48 +876,48 @@ textarea {
   text-shadow: 1px 0 0 white, 0 -1px 0 white, 0 1px 0 white, -1px 0 0 white;
 }
 
-/* line 659, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 689, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-bg-1 {
   background-image: url(/assets/lemon-fc218dd279af3bc9557afe03d358dddedbb47be18359b98ffebe6cb9ee98a8da.gif) !important;
   background-size: contain !important;
 }
 
-/* line 663, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 693, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-bg-3 {
   background-image: url(/assets/lemon3-26fb2f8ac307078770e750533a0d3984150ddfda00c893d8cbb302cf118950a4.gif) !important;
   background-size: contain !important;
 }
 
-/* line 667, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 697, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-bg-4 {
   background-image: url(/assets/lemon4-3c431c8253fdcc8b947ca929418df7cd664825426072897870d29d7f8c1fc433.gif) !important;
   background-size: contain !important;
 }
 
-/* line 671, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 701, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-bg-5 {
   background-image: url(/assets/lemon5-dc1f328a2a68e361db9d42d047175a4a250a1b88300570b39ff8b81f804f5849.gif) !important;
   background-size: contain !important;
 }
 
-/* line 675, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 705, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-bg-6 {
   background-image: url(/assets/lemon6-239104307e4200ef7ad70a82e7b23ddd6976725afb749d7a2614b96ad8fb381a.jpg) !important;
   background-size: cover !important;
 }
 
-/* line 679, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 709, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-bg-8 {
   background-image: url(/assets/lemon8-9a34b28b64a46fbf075d6168ba8d653b598a187e33dc40a6f68c97644c4689dc.gif) !important;
   background-size: contain !important;
 }
 
-/* line 684, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 714, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 #lemon-bg-changer {
   display: none;
 }
 @media screen and (min-width: 900px) {
-  /* line 684, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+  /* line 714, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
   #lemon-bg-changer {
     display: block;
     width: 15px;
@@ -897,159 +931,159 @@ textarea {
   }
 }
 
-/* line 942, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 972, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .flex {
   display: flex;
 }
 
-/* line 946, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 976, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .column {
   flex-direction: column;
 }
 
-/* line 950, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 980, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .start {
   align-items: flex-start;
 }
 
-/* line 954, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 984, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .align-center {
   align-items: center;
 }
 
-/* line 958, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 988, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .justify-center {
   justify-content: center;
 }
 
-/* line 962, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 992, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .justify-between {
   justify-content: space-between;
 }
 
-/* line 966, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 996, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .center {
   align-items: center;
   justify-content: center;
 }
 
-/* line 971, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1001, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .mr-10 {
   margin-right: 10px;
 }
 
-/* line 975, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1005, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .m-15 {
   margin: 15px;
 }
 
-/* line 979, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1009, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .to-fade-in-fast {
   opacity: 0;
   transition: opacity .25s ease-in;
 }
 
-/* line 984, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1014, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .to-fade-in {
   opacity: 0;
   transition: opacity .5s ease-in;
 }
 
-/* line 989, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1019, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .to-fade-in-slower {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
 }
 
-/* line 994, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1024, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .to-fade-in-even-slower {
   opacity: 0;
   transition: opacity 2s ease-in-out;
 }
 
-/* line 999, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1029, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .to-fade-in-slowest {
   opacity: 0;
   transition: opacity 2.5s ease-in-out;
 }
 
-/* line 1004, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1034, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .fade-in {
   opacity: 1;
 }
 
-/* line 1008, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1038, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .slide-left {
   transform: translateX(-52%);
   transition: transform .75s ease-in-out;
 }
 
-/* line 1013, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1043, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .flex-1 {
   flex: 1;
 }
 
-/* line 1017, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1047, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .flex-2 {
   flex: 2;
 }
 
-/* line 1021, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1051, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .flex-3 {
   flex: 3;
 }
 
-/* line 1025, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1055, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .flex-4 {
   flex: 4;
 }
 
-/* line 1029, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1059, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .w-100 {
   width: 100%;
 }
 
-/* line 1033, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1063, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .Lemon {
   background-color: #f4f776;
 }
 
-/* line 1037, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1067, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .Lime {
   background-color: #9dfb4b;
 }
 
-/* line 1041, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1071, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .Orange {
   background-color: #ffd78e;
 }
 
-/* line 1045, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1075, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .pale-Lemon {
   background-color: rgba(244, 247, 118, 0.75);
 }
 
-/* line 1049, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1079, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .pale-Lime {
   background-color: rgba(157, 251, 75, 0.75);
 }
 
-/* line 1053, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1083, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .pale-Orange {
   background-color: rgba(255, 215, 142, 0.75);
 }
 
-/* line 1057, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1087, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .fancy {
   font-family: 'Dancing Script', cursive;
 }
 
-/* line 1061, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1091, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .sans {
   font-family: 'Comic Sans', sans-serif;
 }
 
-/* line 1068, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1098, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .heart {
   width: 100px;
   height: 100px;
@@ -1059,7 +1093,7 @@ textarea {
   transition: background-position 1s steps(28);
   transition-duration: 0s;
 }
-/* line 1077, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
+/* line 1107, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .heart.is-active {
   transition-duration: 1s;
   background-position: -2800px 0;

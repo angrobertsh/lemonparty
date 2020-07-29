@@ -36,26 +36,26 @@ const LemonFocus = ({lemon, clearFocus}) => {
         <div id="lemon-focus-item">
           <div id="lemon-focus-topbar">
             <div id="lemon-focus-back" onClick={ clearFocus }>Back</div>
-            <div id="lemon-focus-header" className={lemon.tree}>
+            <div id="lemon-focus-header" className={`fancy ${lemon.tree}`}>
               {`A ${description} ${lemon.tree} Tree`}
             </div>
           </div>
-          <div id="lemon-focus-lemon">
+          <div className="fancy" id="lemon-focus-lemon">
             <div id="lemon-focus-inner">
               <div id="lemon-focus-text">
-                <div className="fancy" id="lemon-focus-dearest"> Dearest Robert, </div>
+                <div id="lemon-focus-dearest"> Dearest Robert, </div>
                 <br />
-                <div className="fancy">I found you a {description} {lemon.tree} tree. I would describe it as follows:</div>
+                <div>I found you a {description} {lemon.tree} tree. I would describe it as follows:</div>
                 <br />
                 { lemon.location }
                 <br />
                 <br />
-                <div className="fancy">Also,</div>
+                <div>Also,</div>
                 <br />
                 { lemon.note }
                 <br />
                 <br />
-                <div className="fancy" id="lemon-focus-bye">
+                <div id="lemon-focus-bye">
                   <div id="lemon-focus-bye-inner">
                     <div>Love from,</div>
                     <div id="lemon-finder-focus"> {lemon.finder} </div>

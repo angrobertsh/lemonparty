@@ -207,6 +207,7 @@ select {
   justify-content: center;
   padding: 15px;
   background-color: $pale-white;
+  font-weight: bold;
 
   @media screen and (min-width: 900px) {
     padding: 25px;
@@ -415,6 +416,35 @@ select {
   font-weight: bold;
 }
 
+#tree-desc {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#tree-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin: 15px;
+}
+
+#desc-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 15px;
+  flex: 4;
+}
+
+#desc-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .slowbounce {
   -webkit-animation: slowbounce 1s infinite; /* Safari 4.0 - 8.0 */
   animation: slowbounce 1s infinite;
@@ -543,7 +573,7 @@ textarea {
 }
 
 #lemon-focus-bye-inner  {
-  width: 10rem;
+  width: 8rem;
 }
 
 #lemon-focus-back {
