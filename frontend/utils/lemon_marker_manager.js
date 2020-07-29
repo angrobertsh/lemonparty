@@ -11,11 +11,20 @@ export default class LemonMarkerManager{
     this.bounce = this.bounce.bind(this);
   }
 
-  updateMarkers(lemons, focus){
+  updateMarkers(lemons, focus, updateLemon = null){
     let lemonIds = Object.keys(lemons).map((el) => (parseInt(el)));
 
     if(lemonIds.includes(-1)){
       this.removeNewMarker(lemons);
+    }
+
+    if (updateLemon) {
+      const lemonInfo = updateLemon[Object.keys(updateLemon)[0]]
+
+      this.markers.filter((marker) => marker.lemonId === parseInt(lemonInfo.id)).forEach(marker => {
+        const newLatLng = new google.maps.LatLng(lemonInfo.lat, lemonInfo.lng);
+        marker.setPosition(newLatLng)
+      })
     }
 
     this.addNewMarkers(lemonIds, lemons, focus);

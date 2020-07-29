@@ -7,7 +7,8 @@ const mapStateToProps = state => ({
   lemons: state.lemons.lemons,
   focus: state.lemons.focus,
   formOpen: state.lemons.formOpen,
-  form: state.lemons.form
+  form: state.lemons.form,
+  forceUpdateLemon: state.lemons.forceUpdateLemon,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -63,7 +63,7 @@ class LemonMap extends React.Component{
       lemons = this.props.lemons;
     }
 
-    this.LemonMarkerManager.updateMarkers(lemons, this.props.focus);
+    this.LemonMarkerManager.updateMarkers(lemons, this.props.focus, this.props.forceUpdateLemon);
   }
 
   render(){

@@ -18,7 +18,8 @@ const defaultState = {
   focus: null,
   form: defaultForm,
   formOpen: false,
-  modalOpen: false
+  modalOpen: false,
+  forceUpdateLemon: null,
 };
 
 const LemonReducer = (state = defaultState, action) => {
@@ -35,7 +36,7 @@ const LemonReducer = (state = defaultState, action) => {
       newState = merge({}, defaultState, {modalOpen: state.modalOpen}, {focus: state.focus}, {formOpen: state.formOpen}, {form: state.form}, {lemons: action.lemons});
       return newState;
     case "RECEIVE_SINGLE_LEMON":
-      newState = merge(newState, {lemons: merge({}, action.lemon), errors: null}, {errors: []});
+      newState = merge(newState, {lemons: merge({}, action.lemon), errors: null, forceUpdateLemon: null}, {errors: []}, {forceUpdateLemon: action.lemon});
       return newState;
     case "EDIT_LEMON":
       editLemon = merge({}, state.lemons[action.lemonId]);
