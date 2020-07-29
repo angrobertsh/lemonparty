@@ -371,7 +371,7 @@ select {
 
 /* line 251, /Users/robertang/Desktop/lemonparty/app/assets/stylesheets/sffoodtrucks.scss */
 .lemon-location {
-  padding: 4px;
+  padding: 4px 8px 4px 4px;
   width: 55%;
   display: flex;
   align-items: center;
