@@ -6,6 +6,18 @@ class LemonForm extends React.Component{
     super(props);
     this.submitForm = this.submitForm.bind(this);
     this.updateFormLemon = this.updateFormLemon.bind(this);
+    this.openWidget = this.openWidget.bind(this);
+  }
+
+  openWidget(){
+    cloudinary.openUploadWidget(
+      window.CLOUDINARY_OPTIONS,
+      (error, images) => {
+        if(error === null) {
+          this.props.updateLemonForm({url: images[0].url});
+        }
+      }
+    );
   }
 
   submitForm(){
@@ -100,6 +112,12 @@ class LemonForm extends React.Component{
                   </div>
                 </div>
               </div>
+              { editModeCheck &&
+                <div id="image-upload-area">
+                  <div id="image-upload" onClick={this.openWidget}>Upload Image</div>
+                  <div className="focus-image" style={{backgroundImage: `url(${lemon.url})`}} />
+                </div>
+              }
             </div>
           </div>
         </div>

@@ -661,6 +661,20 @@ textarea {
   background-position: center;
 }
 
+#image-upload {
+  border: 1px solid black;
+  background-color: $yellow;
+  padding: 10px 20px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  float: left;
+}
+
+#image-upload-area {
+  padding: 25px;
+}
+
 #lemon-modal-container {
   position: fixed;
   top: 0;

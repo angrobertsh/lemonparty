@@ -3,6 +3,10 @@
     window.currentUser = <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
   <% end %>
   window.keyMatch = "<%= ENV['LEMON_PARTY_TOKEN'] %>"
+  window.CLOUDINARY_OPTIONS = {
+    cloud_name: "<%= ENV['CLOUD_NAME'] %>",
+    upload_preset: "<%= ENV['UPLOAD_PRESET'] %>"
+  };
 </script>
 
 <main id="root"></main>
