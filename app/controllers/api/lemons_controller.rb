@@ -42,6 +42,6 @@ class Api::LemonsController < ApplicationController
   private
 
   def lemon_params
-    params.require(:lemon).permit(:tree, :location, :note, :finder, :lat, :lng, :token)
+    params.require(:lemon).permit(:tree, :location, :note, :finder, :lat, :lng, :token, :url)
   end
 end

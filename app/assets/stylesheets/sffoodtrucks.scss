@@ -157,11 +157,6 @@ select {
   }
 }
 
-#lemon-focus {
-  position: absolute;
-  z-index: 2;
-}
-
 #lemon-form-container {
   position: absolute;
   z-index: 3;
@@ -582,6 +577,8 @@ textarea {
 #lemon-focus {
   height: 100%;
   width: 100%;
+  position: absolute;
+  z-index: 2;
 }
 
 #lemon-focus-inner {
@@ -653,9 +650,15 @@ textarea {
   }
 }
 
-#lemon-focus {
-  width: 100%;
-  height: 100%;
+.focus-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  max-height: 200px;
+  background-position: center;
 }
 
 #lemon-modal-container {

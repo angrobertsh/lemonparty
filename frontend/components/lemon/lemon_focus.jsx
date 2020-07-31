@@ -30,6 +30,7 @@ const LemonFocus = ({lemon, clearFocus}) => {
     } else if (lemon.tree === "REAL") {
       icon = 'https://res.cloudinary.com/dujcpxlhk/image/upload/c_scale,h_41/v1595824487/Lemons/Screen_Shot_2020-07-26_at_9.29.31_PM.png'
     }
+    console.log(lemon.url)
 
     return (
       <div id="lemon-focus">
@@ -61,6 +62,9 @@ const LemonFocus = ({lemon, clearFocus}) => {
                     <div id="lemon-finder-focus"> {lemon.finder} </div>
                   </div>
                 </div>
+                { lemon.url &&
+                  <div className="focus-image" style={{backgroundImage: `url(${lemon.url})`}} />
+                }
               </div>
             </div>
           </div>
