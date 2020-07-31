@@ -19,7 +19,8 @@ class LemonForm extends React.Component{
 
   render(){
     const lemon = this.props.formLemon;
-    let editModeCheck = sessionStorage.getItem("robertslemonpartykey") === 'xe8v6pai7ct';
+    // let editModeCheck = sessionStorage.getItem("robertslemonpartykey") === 'xe8v6pai7ct';
+    let editModeCheck = !!this.props.currentUser
 
     if (this.props.formOpen) {
       return (

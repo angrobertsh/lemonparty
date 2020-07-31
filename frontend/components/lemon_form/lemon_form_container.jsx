@@ -5,7 +5,8 @@ import * as LEMON_ACTIONS from '../../actions/lemon_actions';
 const mapStateToProps = state => ({
   formLemon: state.lemons.form,
   formOpen: state.lemons.formOpen,
-  errors: state.lemons.errors
+  errors: state.lemons.errors,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

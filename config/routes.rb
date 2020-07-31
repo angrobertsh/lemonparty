@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :trucks, only: [:index, :show, :create]
     resources :lemons, only: [:index, :show, :create, :update, :destroy]
+    resource :session, only: [:create, :destroy]
     post 'trucks/seed' => "trucks#seed"
   end
 

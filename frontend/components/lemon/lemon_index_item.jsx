@@ -1,7 +1,8 @@
 import React from 'react';
 
-const LemonIndexItem = ({lemon, setFocus, editLemon, deleteLemon}) => {
-  let editModeCheck = sessionStorage.getItem("robertslemonpartykey") === 'xe8v6pai7ct';
+const LemonIndexItem = ({lemon, setFocus, editLemon, deleteLemon, currentUser}) => {
+  // let editModeCheck = sessionStorage.getItem("robertslemonpartykey") === 'xe8v6pai7ct';
+  let editModeCheck = !!currentUser
 
   let icon;
   if (lemon.tree === "Lemon") {
