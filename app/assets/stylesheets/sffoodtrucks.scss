@@ -624,6 +624,7 @@ textarea {
   width: 100%;
 
   @media screen and (min-width: 900px) {
+    overflow: scroll;
     background-color: $extra-pale-white;
     box-sizing: border-box;
     border-bottom: 100px solid $pale-white;
@@ -661,6 +662,16 @@ textarea {
   background-position: center;
 }
 
+#edit-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  max-height: 200px;
+}
+
 #image-upload {
   border: 1px solid black;
   background-color: $yellow;
@@ -672,7 +683,7 @@ textarea {
 }
 
 #image-upload-area {
-  padding: 25px;
+  padding-left: 35px;
 }
 
 #lemon-modal-container {
@@ -759,6 +770,14 @@ textarea {
     right: 5px;
     cursor: pointer;
   }
+}
+
+#logout {
+  position: fixed;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
 }
 
 // Truck index

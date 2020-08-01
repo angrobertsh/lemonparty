@@ -20,7 +20,13 @@ class Api::LemonsController < ApplicationController
   def update
     @lemon = Lemon.find_by(id: params[:id])
 
-    if @lemon.update(lemon_params)
+    if current_user && current_user.name != "cat"
+      update_params = {url: lemon_params[url]}
+    else
+      update_params = lemon_params
+    end
+
+    if @lemon.update(update_params)
       render "api/lemons/show"
     else
       @errors = @lemon.errors.full_messages.map{|e| e.gsub("Location", "Description").gsub("Finder", "Your name").gsub("Note", "A nice note to Robert") }

@@ -5,3 +5,10 @@ export const logIn = (user) => (
     data: {user: user},
   })
 );
+
+export const logOut = () => (
+  $.ajax({
+    method: "DELETE",
+    url: 'api/session',
+  })
+);

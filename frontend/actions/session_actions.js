@@ -7,6 +7,13 @@ export const logIn = (userData) => dispatch => (
     })
 );
 
+export const logOut = () => dispatch => (
+  SESSION_UTILS.logOut()
+    .then(() => {
+      dispatch(receiveCurrentUser(null));
+    })
+);
+
 export const receiveCurrentUser = (user) => ({
     type: "RECEIVE_CURRENT_USER",
     user: user,

@@ -115,7 +115,7 @@ class LemonForm extends React.Component{
               { editModeCheck &&
                 <div id="image-upload-area">
                   <div id="image-upload" onClick={this.openWidget}>Upload Image</div>
-                  <div className="focus-image" style={{backgroundImage: `url(${lemon.url})`}} />
+                  <div id="edit-image" style={{backgroundImage: `url(${lemon.url})`}} />
                 </div>
               }
             </div>
