@@ -1,5 +1,5 @@
 class Lemon < ApplicationRecord
-
+  audited
   validates :tree, :location, :note, :finder, :lat, :lng, presence: true
 
   def self.in_bounds(bounds)

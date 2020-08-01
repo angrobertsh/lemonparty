@@ -36,6 +36,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "audited", "~> 4.9"
+
 group :production do
   gem 'rails_12factor'
 end
