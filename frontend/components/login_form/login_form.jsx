@@ -20,7 +20,7 @@ class LoginForm extends React.Component{
     } else {
       let hide
       // let editModeCheck = sessionStorage.getItem("robertslemonpartykey") !== 'xe8v6pai7ct'
-      let editModeCheck = (!!sessionStorage.getItem("robertslemonpartykey") && (sessionStorage.getItem("robertslemonpartykey") === window.keyMatch || sessionStorage.getItem("robertslemonpartykey") === window.keyMatch2 || sessionStorage.getItem("robertslemonpartykey") === window.keyMatch3))
+      let editModeCheck = (!!sessionStorage.getItem("robertslemonpartykey") && (sessionStorage.getItem("robertslemonpartykey") === window.keyMatch || sessionStorage.getItem("robertslemonpartykey") === window.keyMatch2 || sessionStorage.getItem("robertslemonpartykey") === window.keyMatch3 || sessionStorage.getItem("robertslemonpartykey") === window.keyMatch4))
 
       if (editModeCheck && !this.props.currentUser) {
         hide = ""
