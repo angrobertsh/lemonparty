@@ -41,6 +41,7 @@ input {
 
 select {
   padding: 5px;
+  font-size: 16px;
 }
 
 // Utility
@@ -264,7 +265,6 @@ select {
   justify-content: center;
   padding: 4px;
   margin-top: 4px;
-  width: 100%;
 }
 
 .lemon-actions > div {
@@ -352,7 +352,6 @@ select {
   padding: 15px;
   background-color: $pale-yellow;
   cursor: pointer;
-  position: absolute;
   border-right: 1px solid $light-gray;
 }
 

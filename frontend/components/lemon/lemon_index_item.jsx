@@ -18,13 +18,13 @@ const LemonIndexItem = ({lemon, setFocus, editLemon, deleteLemon, currentUser}) 
   }
 
   return (
-    <div className={`lemon pale-${lemon.tree}`}>
-      <div className="lemon-top" onClick={() => setFocus(lemon)}>
+    <div className={`lemon pale-${lemon.tree}`} onClick={() => setFocus(lemon)}>
+      <div className="lemon-top">
         <div className="lemon-icon"> <img src={icon} /> </div>
         <div className="lemon-location"> { lemon.location } </div>
         <div className="lemon-finder"> From: { lemon.finder } </div>
       </div>
-      { (sessionStorage.getItem("robertslemonpartykey") === lemon.token || editModeCheck) && (<div className="lemon-actions">
+      { (sessionStorage.getItem("robertslemonpartykey") === lemon.token || editModeCheck) && (<div className={`lemon-actions less-pale-${lemon.tree}`}>
         <div onClick={() => editLemon(lemon.id)} className="mr-10">Edit</div>
         <div onClick={() => {
           const result = confirm("Really delete this tree?")
