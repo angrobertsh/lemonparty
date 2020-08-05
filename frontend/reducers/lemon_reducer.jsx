@@ -20,6 +20,8 @@ const defaultState = {
   formOpen: false,
   modalOpen: false,
   forceUpdateLemon: null,
+  modalUrl: null,
+  imageModalOpen: false,
 };
 
 const LemonReducer = (state = defaultState, action) => {
@@ -82,6 +84,15 @@ const LemonReducer = (state = defaultState, action) => {
       return newState;
     case "CLEAR_LEMON_ERRORS":
       newState = merge(newState, {errors: null}, {errors: []});
+      return newState;
+    case "SET_IMAGE_MODAL":
+      newState = merge(newState, {modalUrl: action.url});
+      return newState;
+    case "OPEN_IMAGE_MODAL":
+      newState = merge(newState, {imageModalOpen: true});
+      return newState;
+    case "CLOSE_IMAGE_MODAL":
+      newState = merge(newState, {imageModalOpen: false});
       return newState;
     default:
       return newState;

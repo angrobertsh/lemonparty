@@ -3,10 +3,12 @@ import Topbar from './topbar/topbar';
 import LemonContainerContainer from './lemon/lemon_container_container';
 import LemonBackgroundChanger from './lemon/lemon_background_changer';
 import LemonModalContainer from './lemon_modal/lemon_modal_container';
+import ImageModalContainer from './image_modal/image_modal_container';
 import LoginFormContainer from './login_form/login_form_container';
 
 const App = () => (
   <div id="page">
+    <ImageModalContainer />
     <LoginFormContainer />
     <LemonModalContainer />
     <LemonBackgroundChanger />

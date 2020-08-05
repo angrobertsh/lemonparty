@@ -7,7 +7,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  clearFocus: lemon => dispatch(LEMON_ACTIONS.clearFocus())
+  clearFocus: lemon => dispatch(LEMON_ACTIONS.clearFocus()),
+  setImageModal: url => dispatch(LEMON_ACTIONS.setImageModal(url)),
+  openImageModal: () => dispatch(LEMON_ACTIONS.openImageModal())
 });
 
 export default connect(

@@ -13,7 +13,7 @@ const adjective = {
   9: "Dangerous",
 }
 
-const LemonFocus = ({lemon, clearFocus}) => {
+const LemonFocus = ({lemon, clearFocus, setImageModal, openImageModal}) => {
   if (lemon) {
     const description = adjective[lemon.id.toString()[lemon.id.toString().length-1]]
 
@@ -62,7 +62,10 @@ const LemonFocus = ({lemon, clearFocus}) => {
                   </div>
                 </div>
                 { lemon.url &&
-                  <div className="focus-image" style={{backgroundImage: `url(${lemon.url})`}} />
+                  <div onClick={() => {
+                    setImageModal(lemon.url);
+                    openImageModal();
+                  }} className="focus-image" style={{backgroundImage: `url(${lemon.url})`}} />
                 }
               </div>
             </div>

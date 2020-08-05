@@ -84,3 +84,16 @@ export const toggleLemonModal = (val) => ({
   type: "TOGGLE_LEMON_MODAL",
   val
 });
+
+export const setImageModal = (url) => ({
+  type: "SET_IMAGE_MODAL",
+  url
+})
+
+export const openImageModal = () => ({
+  type: "OPEN_IMAGE_MODAL",
+})
+
+export const closeImageModal = () => ({
+  type: "CLOSE_IMAGE_MODAL",
+})

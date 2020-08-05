@@ -15,6 +15,7 @@ $light-yellow: rgba(244, 247, 118, 1);
 $pale-light-yellow: rgba(244, 247, 118, .75);
 $gray: rgba(190, 190, 190, 1);
 $medium-heavy-gray: rgba(190, 190, 190, .75);
+$heavy-dark-dark-gray: rgba(20, 20, 20, .9);
 $medium-gray: rgba(190, 190, 190, .5);
 $light-gray: rgba(190, 190, 190, .2);
 $lightest-gray: rgba(255, 255, 255, .05);
@@ -660,6 +661,7 @@ textarea {
   min-height: 100px;
   max-height: 200px;
   background-position: center;
+  cursor: pointer;
 }
 
 #edit-image {
@@ -739,6 +741,25 @@ textarea {
   font-size: 36px;
   color: black;
   text-shadow: 1px 0 0 white, 0 -1px 0 white, 0 1px 0 white, -1px 0 0 white;
+}
+
+#image-modal-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: $heavy-dark-dark-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#image-modal-image {
+  max-width: 75%;
+  max-height: 75%;
 }
 
 // BG changer
