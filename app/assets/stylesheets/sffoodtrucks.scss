@@ -651,14 +651,19 @@ textarea {
   }
 }
 
+.focus-image-container {
+  display: flex;
+  justify-content: center;
+}
+
 .focus-image {
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: 25px;
   display: flex;
   justify-content: center;
-  min-height: 100px;
-  max-height: 200px;
+  width: 300px;
+  height: 400px;
   background-position: center;
   cursor: pointer;
 }

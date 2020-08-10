@@ -62,10 +62,12 @@ const LemonFocus = ({lemon, clearFocus, setImageModal, openImageModal}) => {
                   </div>
                 </div>
                 { lemon.url &&
-                  <div onClick={() => {
-                    setImageModal(lemon.url);
-                    openImageModal();
-                  }} className="focus-image" style={{backgroundImage: `url(${lemon.url})`}} />
+                  <div className="focus-image-container">
+                    <div onClick={() => {
+                      setImageModal(lemon.url);
+                      openImageModal();
+                    }} className="focus-image" style={{backgroundImage: `url(${lemon.url})`}} />
+                  </div>
                 }
               </div>
             </div>
